@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect, useState } from 'react';
+import { Check, Scale, Users, FileText, MessageSquare, Phone, Clock, Award } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import PracticeAreas from '@/components/PracticeAreas';
+import AppointmentBanner from '@/components/AppointmentBanner';
+import AboutSection from '@/components/AboutSection';
+import AnimatedCounters from '@/components/AnimatedCounters';
+import WorkflowProcess from '@/components/WorkflowProcess';
+import TestimonialsSlider from '@/components/TestimonialsSlider';
+import BlogTeaser from '@/components/BlogTeaser';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <Hero />
+      <PracticeAreas />
+      <AppointmentBanner />
+      <AboutSection />
+      <AnimatedCounters />
+      <WorkflowProcess />
+      <TestimonialsSlider />
+      <BlogTeaser />
+      <WhatsAppFloat />
+      <Footer />
     </div>
   );
 };
