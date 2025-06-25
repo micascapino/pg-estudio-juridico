@@ -74,6 +74,12 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			transitionDuration: {
+				'400': '400ms',
+				'600': '600ms',
+				'800': '800ms',
+				'1000': '1000ms',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {

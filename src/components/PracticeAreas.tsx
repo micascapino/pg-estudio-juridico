@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Scale, Users, FileText, MessageSquare, Phone, Clock } from 'lucide-react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const practiceAreas = [
   {
@@ -43,38 +44,48 @@ const practiceAreas = [
 
 const PracticeAreas = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const titleAnimation = useScrollReveal();
+  const subtitleAnimation = useScrollReveal({ delay: 200 });
 
   return (
     <section id="areas" className="py-20 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
-            Áreas de Práctica
-          </h2>
-          <p className="font-inter text-xl text-gray-600 max-w-2xl mx-auto">
-            Brindamos asesoramiento especializado en diversas ramas del derecho
-            con un enfoque integral y personalizado.
-          </p>
+          <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
+            <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
+              Áreas de Práctica
+            </h2>
+          </div>
+          <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
+            <p className="font-inter text-xl text-gray-600 max-w-2xl mx-auto">
+              Brindamos asesoramiento especializado en diversas ramas del derecho
+              con un enfoque integral y personalizado.
+            </p>
+          </div>
         </div>
 
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {practiceAreas.map((area, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl p-8 shadow-custom hover:shadow-custom-hover transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className={`w-16 h-16 ${area.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <area.icon className="h-8 w-8 text-primary" />
+          {practiceAreas.map((area, index) => {
+            const cardAnimation = useScrollReveal({ delay: index * 100 + 400 });
+            return (
+              <div
+                key={index}
+                ref={cardAnimation.elementRef}
+                className={`bg-white rounded-xl p-8 shadow-custom hover:shadow-custom-hover transition-all duration-300 hover:-translate-y-2 group ${cardAnimation.className}`}
+              >
+                <div className={`w-16 h-16 ${area.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <area.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="font-poppins font-semibold text-xl text-dark-gray mb-3">
+                  {area.title}
+                </h3>
+                <p className="font-inter text-gray-600 leading-relaxed">
+                  {area.description}
+                </p>
               </div>
-              <h3 className="font-poppins font-semibold text-xl text-dark-gray mb-3">
-                {area.title}
-              </h3>
-              <p className="font-inter text-gray-600 leading-relaxed">
-                {area.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Mobile Carousel */}
