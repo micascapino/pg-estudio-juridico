@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Container, ButtonSystem, WhatsAppButton } from '@/components/design-system';
+import { Container, WhatsAppButton } from '@/components/design-system';
 
 // Constantes de navegación
 const PRACTICE_AREAS = [
@@ -42,32 +42,50 @@ interface NavLinkProps {
   className?: string;
 }
 
-const NavLink = ({ to, children, onClick, className = '' }: NavLinkProps) => (
-  <Link
-    to={to}
-    onClick={onClick}
-    className={`font-inter text-dark-gray hover:text-primary transition-colors duration-300 ${className}`}
-  >
-    {children}
-  </Link>
-);
+const NavLink = ({ to, children, onClick, className = '' }: NavLinkProps) => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+    if (onClick) onClick();
+  };
+
+  return (
+    <Link
+      to={to}
+      onClick={handleClick}
+      className={`font-inter text-dark-gray hover:text-primary transition-colors duration-300 ${className}`}
+    >
+      {children}
+    </Link>
+  );
+};
 
 // Componente DropdownLink
-const DropdownLink = ({ to, children, onClick }: NavLinkProps) => (
-  <Link
-    to={to}
-    onClick={onClick}
-    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-  >
-    {children}
-  </Link>
-);
+const DropdownLink = ({ to, children, onClick }: NavLinkProps) => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+    if (onClick) onClick();
+  };
+
+  return (
+    <Link
+      to={to}
+      onClick={handleClick}
+      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+    >
+      {children}
+    </Link>
+  );
+};
 
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const dropdown = useDropdown();
 
   const closeMobileMenu = () => setIsMobileOpen(false);
+  
+  const handleNavigation = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
@@ -75,7 +93,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+            <Link to="/" onClick={handleNavigation} className="flex items-center">
               <img 
                 src="/logo-estudio-gp.png" 
                 alt="Giamberardino & Petrocco" 
