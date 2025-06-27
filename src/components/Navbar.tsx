@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Scale, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -31,9 +30,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <Scale className="h-8 w-8 text-primary mr-2" />
-              <span className="font-poppins font-bold text-xl text-dark-gray">
-                Giambearrdino & Petrocco Abogados
+              <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-primary mr-2" />
+              <span className="font-poppins font-bold text-sm sm:text-xl text-dark-gray">
+                Giamberardino & Petrocco
               </span>
             </Link>
           </div>
@@ -115,7 +114,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button 
-              className="bg-primary hover:bg-primary-shade text-white font-medium px-6 py-2 rounded-full transition-transform duration-150 hover:scale-105"
+              className="bg-primary hover:bg-primary-shade text-white font-medium px-4 lg:px-6 py-2 rounded-full transition-transform duration-150 hover:scale-105 text-sm"
               onClick={() => window.open('https://wa.me/5492234373938', '_blank')}
             >
               Consultanos
@@ -136,60 +135,60 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white border-b border-gray-200 shadow-lg">
+          <div className="px-3 pt-3 pb-4 space-y-2">
             <Link
               to="/"
-              className="font-inter text-dark-gray hover:text-primary block px-3 py-2 text-base font-medium"
+              className="font-inter text-dark-gray hover:text-primary hover:bg-gray-50 block px-3 py-2 text-sm font-medium rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Inicio
             </Link>
             
             {/* Áreas de Práctica - Móvil */}
-            <div className="px-3 py-2">
-              <div className="font-inter text-dark-gray text-base font-medium mb-2">
+            <div className="px-3 py-1">
+              <div className="font-inter text-dark-gray text-sm font-medium mb-2 text-gray-500 uppercase tracking-wide">
                 Áreas de Práctica
               </div>
-              <div className="pl-4 space-y-1">
+              <div className="pl-2 space-y-1">
                 <Link
                   to="/derecho-laboral"
-                  className="font-inter text-gray-600 hover:text-primary block py-1 text-sm"
+                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   Derecho Laboral
                 </Link>
                 <Link
                   to="/derecho-danos"
-                  className="font-inter text-gray-600 hover:text-primary block py-1 text-sm"
+                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   Derecho de Daños
                 </Link>
                 <Link
                   to="/derecho-comercial"
-                  className="font-inter text-gray-600 hover:text-primary block py-1 text-sm"
+                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   Derecho Comercial
                 </Link>
                 <Link
                   to="/derecho-penal"
-                  className="font-inter text-gray-600 hover:text-primary block py-1 text-sm"
+                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   Derecho Penal
                 </Link>
                 <Link
                   to="/derecho-familia"
-                  className="font-inter text-gray-600 hover:text-primary block py-1 text-sm"
+                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   Derecho de Familia
                 </Link>
                 <Link
                   to="/mediacion"
-                  className="font-inter text-gray-600 hover:text-primary block py-1 text-sm"
+                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
                   onClick={() => setIsOpen(false)}
                 >
                   Mediación
@@ -199,14 +198,15 @@ const Navbar = () => {
             
             <Link
               to="/contacto"
-              className="font-inter text-dark-gray hover:text-primary block px-3 py-2 text-base font-medium"
+              className="font-inter text-dark-gray hover:text-primary hover:bg-gray-50 block px-3 py-2 text-sm font-medium rounded-md"
               onClick={() => setIsOpen(false)}
             >
               Contacto
             </Link>
-            <div className="px-3 py-2">
+            
+            <div className="px-3 pt-3">
               <Button 
-                className="w-full bg-primary hover:bg-primary-shade text-white font-medium py-2 rounded-full"
+                className="w-full bg-primary hover:bg-primary-shade text-white font-medium py-2.5 rounded-full text-sm"
                 onClick={() => {
                   window.open('https://wa.me/5492234373938', '_blank');
                   setIsOpen(false);

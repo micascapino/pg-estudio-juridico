@@ -1,185 +1,256 @@
-import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { FileText, MessageSquare, Phone, Clock } from 'lucide-react';
+import { FC } from 'react';
+import { Building, Gavel, Heart, HandHeart, FileText, Users, Scale, Shield } from 'lucide-react';
 import ContactForm from './ContactForm';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
-const CommercialLawSection = () => {
-  const titleAnimation = useScrollReveal();
-  const subtitleAnimation = useScrollReveal({ delay: 200 });
+// Derecho Comercial
+export const CommercialLawSection = () => {
+  const servicesAnimation = useScrollReveal();
+
+  const services = [
+    {
+      icon: <Building className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Constitución de Sociedades",
+      description: "Creación y estructura de empresas"
+    },
+    {
+      icon: <FileText className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Contratos Comerciales",
+      description: "Redacción y negociación de acuerdos"
+    },
+    {
+      icon: <Scale className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Derecho Concursal",
+      description: "Concursos y quiebras empresariales"
+    },
+    {
+      icon: <Shield className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Propiedad Intelectual",
+      description: "Marcas, patentes y derechos de autor"
+    }
+  ];
 
   return (
-    <section id="derecho-comercial" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-            <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
-              Derecho Comercial
-            </h2>
-          </div>
-          <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
-            <p className="font-inter text-xl text-gray-600 max-w-4xl mx-auto">
-              Asesoramiento integral en derecho empresarial, sociedades y contratos comerciales 
-              para el crecimiento y protección de tu negocio.
-            </p>
-          </div>
+    <>
+      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
+            Nuestros Servicios
+          </h2>
+          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
+            Asesoramiento integral para el desarrollo de tu empresa
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            <div className="bg-primary/5 rounded-xl p-8 text-center">
-              <FileText className="h-16 w-16 text-primary mx-auto mb-4" />
-              <h3 className="font-poppins font-semibold text-2xl text-dark-gray mb-4">
-                Sección en Desarrollo
-              </h3>
-              <p className="font-inter text-gray-600">
-                Estamos trabajando en el contenido detallado de esta área. 
-                Mientras tanto, puedes contactarnos para recibir asesoramiento especializado.
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
+                  {service.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <ContactForm />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-const CriminalLawSection = () => {
-  const titleAnimation = useScrollReveal();
-  const subtitleAnimation = useScrollReveal({ delay: 200 });
+// Derecho Penal
+export const CriminalLawSection = () => {
+  const servicesAnimation = useScrollReveal();
+
+  const services = [
+    {
+      icon: <Gavel className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Defensa Penal",
+      description: "Representación en procesos penales"
+    },
+    {
+      icon: <FileText className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Querellas",
+      description: "Inicio de acciones penales privadas"
+    },
+    {
+      icon: <HandHeart className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Mediación Penal",
+      description: "Resolución alternativa de conflictos"
+    },
+    {
+      icon: <Users className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Violencia Familiar",
+      description: "Protección y medidas cautelares"
+    }
+  ];
 
   return (
-    <section id="derecho-penal" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-            <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
-              Derecho Penal
-            </h2>
-          </div>
-          <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
-            <p className="font-inter text-xl text-gray-600 max-w-4xl mx-auto">
-              Defensa penal especializada, querellas y mediación penal con un enfoque 
-              integral para proteger tus derechos.
-            </p>
-          </div>
+    <>
+      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
+            Nuestros Servicios
+          </h2>
+          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
+            Defensa especializada para proteger tus derechos
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl p-8 text-center shadow-sm">
-              <MessageSquare className="h-16 w-16 text-primary mx-auto mb-4" />
-              <h3 className="font-poppins font-semibold text-2xl text-dark-gray mb-4">
-                Sección en Desarrollo
-              </h3>
-              <p className="font-inter text-gray-600">
-                Estamos trabajando en el contenido detallado de esta área. 
-                Mientras tanto, puedes contactarnos para recibir asesoramiento especializado.
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
+                  {service.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <ContactForm />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-const FamilyLawSection = () => {
-  const titleAnimation = useScrollReveal();
-  const subtitleAnimation = useScrollReveal({ delay: 200 });
+// Derecho de Familia
+export const FamilyLawSection = () => {
+  const servicesAnimation = useScrollReveal();
+
+  const services = [
+    {
+      icon: <Heart className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Divorcios",
+      description: "Tramitación de divorcios consensuados y contenciosos"
+    },
+    {
+      icon: <Users className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Tenencia de Menores",
+      description: "Régimen de visitas y cuidado personal"
+    },
+    {
+      icon: <FileText className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Cuota Alimentaria",
+      description: "Fijación y modificación de alimentos"
+    },
+    {
+      icon: <Scale className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Sucesiones",
+      description: "Tramitación de herencias y legados"
+    }
+  ];
 
   return (
-    <section id="derecho-familia" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-            <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
-              Derecho de Familia
-            </h2>
-          </div>
-          <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
-            <p className="font-inter text-xl text-gray-600 max-w-4xl mx-auto">
-              Asesoramiento sensible y profesional en divorcios, tenencia, cuota alimentaria 
-              y sucesiones, priorizando el bienestar familiar.
-            </p>
-          </div>
+    <>
+      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
+            Nuestros Servicios
+          </h2>
+          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
+            Acompañamiento sensible en momentos difíciles de la familia
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            <div className="bg-primary/5 rounded-xl p-8 text-center">
-              <Phone className="h-16 w-16 text-primary mx-auto mb-4" />
-              <h3 className="font-poppins font-semibold text-2xl text-dark-gray mb-4">
-                Sección en Desarrollo
-              </h3>
-              <p className="font-inter text-gray-600">
-                Estamos trabajando en el contenido detallado de esta área. 
-                Mientras tanto, puedes contactarnos para recibir asesoramiento especializado.
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
+                  {service.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <ContactForm />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-const MediationSection = () => {
-  const titleAnimation = useScrollReveal();
-  const subtitleAnimation = useScrollReveal({ delay: 200 });
+// Mediación
+export const MediationSection = () => {
+  const servicesAnimation = useScrollReveal();
+
+  const services = [
+    {
+      icon: <HandHeart className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Mediación Civil",
+      description: "Resolución pacífica de conflictos civiles"
+    },
+    {
+      icon: <Users className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Mediación Familiar",
+      description: "Acuerdos en temas de familia"
+    },
+    {
+      icon: <Building className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Mediación Comercial",
+      description: "Conflictos entre empresas"
+    },
+    {
+      icon: <Scale className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Mediación Laboral",
+      description: "Resolución de conflictos laborales"
+    }
+  ];
 
   return (
-    <section id="mediacion" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-            <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
-              Mediación
-            </h2>
-          </div>
-          <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
-            <p className="font-inter text-xl text-gray-600 max-w-4xl mx-auto">
-              Resolución alternativa de conflictos y mediación civil para encontrar 
-              soluciones pacíficas y eficientes.
-            </p>
-          </div>
+    <>
+      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
+            Nuestros Servicios
+          </h2>
+          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
+            Soluciones pacíficas y eficientes para resolver conflictos
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl p-8 text-center shadow-sm">
-              <Clock className="h-16 w-16 text-primary mx-auto mb-4" />
-              <h3 className="font-poppins font-semibold text-2xl text-dark-gray mb-4">
-                Sección en Desarrollo
-              </h3>
-              <p className="font-inter text-gray-600">
-                Estamos trabajando en el contenido detallado de esta área. 
-                Mientras tanto, puedes contactarnos para recibir asesoramiento especializado.
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
+                  {service.icon}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <ContactForm />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+    </>
   );
-};
-
-export { CommercialLawSection, CriminalLawSection, FamilyLawSection, MediationSection }; 
+}; 

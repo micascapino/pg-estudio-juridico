@@ -1,176 +1,151 @@
-import { useScrollReveal } from '@/hooks/useScrollReveal';
-import { Car, Stethoscope, Scale, Shield, Heart, MessageSquare, CheckCircle } from 'lucide-react';
+import { FC } from 'react';
+import { Car, Heart, Building, Users, FileText, Shield, AlertTriangle, Scale } from 'lucide-react';
 import ContactForm from './ContactForm';
-
-const damagesServices = [
-  {
-    icon: Car,
-    title: 'Accidentes de Tránsito',
-    description: 'Daño físico o lesiones, incapacidad, daño psicológico. Pérdida de vida. Daño automotor.'
-  },
-  {
-    icon: Stethoscope,
-    title: 'Mala Praxis',
-    description: 'Mala praxis médica, incapacidades, daño psicológico, reclamo legal.'
-  },
-  {
-    icon: Scale,
-    title: 'Responsabilidad Civil',
-    description: 'Contractual y extracontractual. Daños y perjuicios.'
-  },
-  {
-    icon: Shield,
-    title: 'Reclamos ante Compañías de Seguro',
-    description: 'Reclamos ante Compañías de Seguro, Aseguradoras, Obras Sociales.'
-  },
-  {
-    icon: Heart,
-    title: 'Amparos de Salud',
-    description: 'Irregularidades en la afiliación, negativa de afiliación, falta de entrega o autorización de medicación, rechazo en la cobertura de tratamientos especiales.'
-  },
-  {
-    icon: MessageSquare,
-    title: 'Mediaciones',
-    description: 'Resolución alternativa de conflictos en materia de daños y responsabilidad civil.'
-  }
-];
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const DamagesLawSection = () => {
-  const titleAnimation = useScrollReveal();
-  const subtitleAnimation = useScrollReveal({ delay: 200 });
+  const accidentsAnimation = useScrollReveal();
+  const malpracticeAnimation = useScrollReveal({ delay: 200 });
+  const civilAnimation = useScrollReveal({ delay: 400 });
+
+  const trafficAccidents = [
+    {
+      icon: <Car className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Accidentes de Tránsito",
+      description: "Colisiones, atropellos y siniestros viales"
+    },
+    {
+      icon: <AlertTriangle className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Daños Materiales",
+      description: "Reparación de vehículos y objetos dañados"
+    },
+    {
+      icon: <Heart className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Lesiones Personales",
+      description: "Daño físico y psicológico a personas"
+    },
+    {
+      icon: <FileText className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />,
+      title: "Gestión de Seguros",
+      description: "Tramitación con compañías aseguradoras"
+    }
+  ];
+
+  const malpracticeTypes = [
+    {
+      type: "Negligencia Médica",
+      description: "Errores en diagnóstico o tratamiento",
+      icon: <Heart className="h-4 w-4 sm:h-5 sm:w-5 text-red-500" />
+    },
+    {
+      type: "Error Quirúrgico",
+      description: "Complicaciones en intervenciones",
+      icon: <Shield className="h-4 w-4 sm:h-5 sm:w-5 text-red-500" />
+    },
+    {
+      type: "Falta de Información",
+      description: "Consentimiento informado deficiente",
+      icon: <FileText className="h-4 w-4 sm:h-5 sm:w-5 text-red-500" />
+    },
+    {
+      type: "Abandono de Persona",
+      description: "Desatención del deber de cuidado",
+      icon: <Users className="h-4 w-4 sm:h-5 sm:w-5 text-red-500" />
+    }
+  ];
+
+  const civilResponsibilities = [
+    {
+      area: "Responsabilidad Contractual",
+      details: "Incumplimiento de contratos y obligaciones pactadas",
+      cases: ["Incumplimiento de plazos", "Defectos en la prestación", "Daños por incumplimiento"]
+    },
+    {
+      area: "Responsabilidad Extracontractual",
+      details: "Daños causados sin relación contractual previa",
+      cases: ["Daños por animales", "Caída de objetos", "Responsabilidad por terceros"]
+    },
+    {
+      area: "Responsabilidad Profesional",
+      details: "Daños causados en el ejercicio profesional",
+      cases: ["Error profesional", "Negligencia", "Violación del deber de cuidado"]
+    }
+  ];
 
   return (
-    <section id="derecho-danos" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-            <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
-              Derecho de Daños
+    <>
+      {/* Accidentes de Tránsito */}
+        <div ref={accidentsAnimation.elementRef} className={accidentsAnimation.className}>
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
+              Accidentes de Tránsito
             </h2>
-          </div>
-          <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
-            <p className="font-inter text-xl text-gray-600 max-w-4xl mx-auto">
-              Nos especializamos en la rápida resolución de cualquier tipo de conflicto que surja de la 
-              Responsabilidad Civil en general (contractual o extracontractual). Reclamando ante las Compañías 
-              Aseguradoras y/o Responsables del evento dañoso, Obras Sociales, Seguros Médicos.
+            <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Asesoramiento integral en siniestros viales y reclamos de seguros
             </p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-20">
+            {trafficAccidents.map((accident, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
+                <div className="text-center">
+                  <div className="bg-primary/10 rounded-full p-3 sm:p-4 w-fit mx-auto mb-3 sm:mb-4">
+                    {accident.icon}
+                  </div>
+                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-2 sm:mb-3">
+                    {accident.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600">
+                    {accident.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Main Content */}
-          <div className="lg:col-span-2 space-y-12">
-            {/* Services Section */}
-            <div>
-              <h3 className="font-poppins font-semibold text-2xl text-dark-gray mb-8">
-                Nuestros Servicios en Derecho de Daños
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {damagesServices.map((service, index) => {
-                  const cardAnimation = useScrollReveal({ delay: index * 100 + 400 });
-                  return (
-                    <div
-                      key={index}
-                      ref={cardAnimation.elementRef}
-                      className={`bg-white rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 ${cardAnimation.className}`}
-                    >
-                      <div className="flex items-start space-x-4">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                          <service.icon className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-poppins font-semibold text-lg text-dark-gray mb-2">
-                            {service.title}
-                          </h4>
-                          <p className="font-inter text-gray-600">
-                            {service.description}
-                          </p>
-                        </div>
-                      </div>
+       
+
+        {/* Responsabilidad Civil */}
+        <div ref={civilAnimation.elementRef} className={civilAnimation.className}>
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
+              Responsabilidad Civil
+            </h2>
+            <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Cobertura integral en todos los aspectos de la responsabilidad civil
+            </p>
+          </div>
+
+          <div className="space-y-6 sm:space-y-8 mb-12 sm:mb-20">
+            {civilResponsibilities.map((responsibility, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
+                    <Scale className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-inter font-semibold text-sm sm:text-xl text-dark-gray mb-2 sm:mb-3">
+                      {responsibility.area}
+                    </h3>
+                    <p className="text-xs sm:text-base text-gray-600 mb-3 sm:mb-4">
+                      {responsibility.details}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {responsibility.cases.map((case_item, caseIndex) => (
+                        <span key={caseIndex} className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-primary/10 text-primary">
+                          {case_item}
+                        </span>
+                      ))}
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* What We Guarantee */}
-            <div className="bg-white rounded-xl p-8 shadow-sm">
-              <h3 className="font-poppins font-semibold text-2xl text-dark-gray mb-6">
-                Nos Aseguramos de Brindarte
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-poppins font-semibold text-lg text-dark-gray mb-2">
-                      Soluciones Rápidas
-                    </h4>
-                    <p className="font-inter text-gray-600">
-                      Trabajamos para que recibas una resolución ágil de tu caso, minimizando los tiempos de espera.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-poppins font-semibold text-lg text-dark-gray mb-2">
-                      Retribución Justa por Daños Materiales
-                    </h4>
-                    <p className="font-inter text-gray-600">
-                      Te aseguramos la compensación que te corresponde por todos los daños patrimoniales sufridos.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-poppins font-semibold text-lg text-dark-gray mb-2">
-                      Compensación por Daños Morales
-                    </h4>
-                    <p className="font-inter text-gray-600">
-                      También reclamamos la indemnización por daños inmateriales, incluyendo el sufrimiento psicológico.
-                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Areas of Expertise */}
-            <div className="bg-primary/5 rounded-xl p-8">
-              <h3 className="font-poppins font-semibold text-2xl text-dark-gray mb-6">
-                Especialistas en Responsabilidad Civil
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-poppins font-semibold text-lg text-dark-gray mb-3">
-                    Responsabilidad Contractual
-                  </h4>
-                  <p className="font-inter text-gray-600">
-                    Cuando se incumple una obligación nacida de un contrato válido entre las partes.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-poppins font-semibold text-lg text-dark-gray mb-3">
-                    Responsabilidad Extracontractual
-                  </h4>
-                  <p className="font-inter text-gray-600">
-                    Daños causados sin que exista una relación contractual previa entre las partes.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-8">
-              <ContactForm />
-            </div>
+            ))}
           </div>
         </div>
-      </div>
-    </section>
+
+    </>
   );
 };
 

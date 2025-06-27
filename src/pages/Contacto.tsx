@@ -75,16 +75,16 @@ const Contacto = () => {
       <Navbar />
       
       {/* Header Section */}
-      <section className="pt-24 pb-12 bg-primary/5">
+      <section className="pt-20 sm:pt-24 pb-8 sm:pb-12 bg-primary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-              <h1 className="font-poppins font-bold text-4xl sm:text-5xl text-dark-gray mb-4">
+              <h1 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
                 Contacto
               </h1>
             </div>
             <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
-              <p className="font-inter text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-3xl mx-auto">
                 Si tenés alguna duda escribinos y nos comunicamos a la brevedad. 
                 También podés visitarnos personalmente, estamos en pleno centro de Mar del Plata.
               </p>
@@ -94,7 +94,7 @@ const Contacto = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-poppins font-bold text-3xl text-dark-gray mb-4">

@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 
 const AnimatedCounters = () => {
@@ -62,41 +61,41 @@ const AnimatedCounters = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-primary">
+    <section ref={sectionRef} className="py-12 sm:py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div className="text-center">
-            <div className="font-poppins font-bold text-4xl sm:text-5xl text-white mb-2">
+            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
               {counters.years}+
             </div>
-            <div className="font-inter text-white/80 text-lg">
+            <div className="font-inter text-white/80 text-xs sm:text-lg">
               Años de Experiencia
             </div>
           </div>
           
           <div className="text-center">
-            <div className="font-poppins font-bold text-4xl sm:text-5xl text-white mb-2">
+            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
               {counters.cases}+
             </div>
-            <div className="font-inter text-white/80 text-lg">
+            <div className="font-inter text-white/80 text-xs sm:text-lg">
               Casos Resueltos
             </div>
           </div>
           
           <div className="text-center">
-            <div className="font-poppins font-bold text-4xl sm:text-5xl text-white mb-2">
+            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
               {counters.clients}+
             </div>
-            <div className="font-inter text-white/80 text-lg">
+            <div className="font-inter text-white/80 text-xs sm:text-lg">
               Clientes Satisfechos
             </div>
           </div>
           
           <div className="text-center">
-            <div className="font-poppins font-bold text-4xl sm:text-5xl text-white mb-2">
+            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
               {counters.consultations}+
             </div>
-            <div className="font-inter text-white/80 text-lg">
+            <div className="font-inter text-white/80 text-xs sm:text-lg">
               Consultas Atendidas
             </div>
           </div>

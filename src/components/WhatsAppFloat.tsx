@@ -11,7 +11,7 @@ const WhatsAppFloat = () => {
       aria-label="Contactar por WhatsApp"
       type="button"
     >
-      <img src="/icons/whatsapp-icon.svg" alt="WhatsApp" className="h-8 w-8 mx-auto" />
+      <img src="/icons/whatsapp-logo.svg" alt="WhatsApp" className="h-8 w-8 mx-auto" />
     </button>
   );
 }

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -27,27 +26,27 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto animate-fade-in">
-        <h1 className="font-poppins font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+        <h1 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-6xl leading-tight mb-4 sm:mb-6">
           Abogados especializados en soluciones legales
           <br />
           <span className="text-accent">claras y efectivas.</span>
         </h1>
 
-        <p className="font-inter text-xl sm:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
+        <p className="font-inter text-base sm:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 max-w-2xl mx-auto">
           Más de 15 años de experiencia brindando asesoramiento legal integral
           con un enfoque personalizado y resultados comprobados.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <Button
-            className="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-custom"
+            className="bg-white text-primary hover:bg-gray-100 font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-custom text-sm sm:text-base w-full sm:w-auto"
             onClick={() => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Conócenos
           </Button>
 
           <Button
-            className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+            className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
             onClick={() => window.open('https://wa.me/5492234373938', '_blank')}
           >
             Quiero Asesoramiento
