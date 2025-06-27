@@ -13,8 +13,6 @@ const PRACTICE_AREAS = [
   { path: '/mediacion', label: 'Mediación' }
 ];
 
-const WHATSAPP_NUMBER = '5492234373938';
-
 // Hook personalizado para dropdown
 const useDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -144,7 +142,6 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <WhatsAppButton 
-              phone={WHATSAPP_NUMBER}
               className="text-sm px-4 lg:px-6 py-2"
             >
               Consultanos
@@ -204,7 +201,6 @@ const Navbar = () => {
             
             <div className="px-3 pt-3">
               <WhatsAppButton 
-                phone={WHATSAPP_NUMBER}
                 className="w-full"
               >
                 Consultanos

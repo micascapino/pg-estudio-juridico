@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Container } from '@/components/design-system';
+import { Container, WhatsAppButton } from '@/components/design-system';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -40,22 +40,22 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
           <Button
-            className="bg-white text-primary hover:bg-gray-100 font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-custom text-sm sm:text-base w-full sm:w-auto"
+            className="!bg-transparent border-2 border-white text-white hover:!bg-white hover:!text-primary font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
             onClick={() => document.getElementById('nosotros')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Conócenos
           </Button>
 
-          <Button
-            className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
-            onClick={() => window.open('https://wa.me/5492234373938', '_blank')}
+          <WhatsAppButton
+            className="bg-white text-primary hover:bg-gray-100 font-semibold px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-custom text-sm sm:text-base w-full sm:w-auto"
           >
             Quiero Asesoramiento
-          </Button>
+          </WhatsAppButton>
+
         </div>
       </Container>
 
-  
+
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
