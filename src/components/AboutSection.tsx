@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Container, Section, Title, Body, Card } from '@/components/design-system';
 
 const AboutSection = () => {
   const values = [
@@ -13,29 +14,24 @@ const AboutSection = () => {
 
   const titleAnimation = useScrollReveal();
   const textAnimation = useScrollReveal({ delay: 200 });
-  const imageAnimation = useScrollReveal({ delay: 100 });
   const missionAnimation = useScrollReveal({ delay: 600 });
 
   return (
-    <section id="nosotros" className="py-12 sm:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Section id="nosotros" className="bg-white">
+      <Container>
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-        
-          {/* Contenido */}
           <div className="order-1 lg:order-2">
             <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-              <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-4 sm:mb-6">
-                Sobre Nosotros
-              </h2>
+              <Title>Sobre Nosotros</Title>
             </div>
             
             <div ref={textAnimation.elementRef} className={textAnimation.className}>
-              <p className="font-inter text-sm sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
+              <Body className="mb-6 sm:mb-8">
                 En Estudio Jurídico Giamberardino & Petrocco, nos especializamos en brindar soluciones 
                 legales integrales con un enfoque personalizado. Nuestro compromiso es 
                 acompañar a nuestros clientes en cada etapa del proceso legal, 
                 garantizando resultados exitosos y satisfactorios.
-              </p>
+              </Body>
 
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {values.map((value, index) => {
@@ -53,21 +49,21 @@ const AboutSection = () => {
             </div>
 
             <div ref={missionAnimation.elementRef} className={missionAnimation.className}>
-              <div className="bg-light-gray rounded-xl p-4 sm:p-6">
+              <Card variant="outlined" className="bg-light-gray">
                 <h3 className="font-poppins font-semibold text-base sm:text-xl text-dark-gray mb-2">
                   Nuestra Misión
                 </h3>
-                <p className="font-inter text-xs sm:text-base text-gray-600">
+                <Body>
                   Brindar asesoramiento jurídico de excelencia, construyendo relaciones 
                   de confianza duraderas con nuestros clientes y contribuyendo al 
                   desarrollo de una sociedad más justa.
-                </p>
-              </div>
+                </Body>
+              </Card>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };
 

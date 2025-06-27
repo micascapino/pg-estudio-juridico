@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Building, Gavel, Heart, HandHeart, FileText, Users, Scale, Shield } from 'lucide-react';
 import ContactForm from './ContactForm';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { SectionHeader, Grid, Title, Subtitle, ServiceCard } from '@/components/design-system';
 
 // Derecho Comercial
 export const CommercialLawSection = () => {
@@ -31,38 +32,25 @@ export const CommercialLawSection = () => {
   ];
 
   return (
-    <>
-      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
-        <div className="text-center mb-6 sm:mb-8">
-          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
-            Nuestros Servicios
-          </h2>
-          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
-            Asesoramiento integral para el desarrollo de tu empresa
-          </p>
-        </div>
+    <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+      <SectionHeader>
+        <Title>Nuestros Servicios</Title>
+        <Subtitle>
+          Asesoramiento integral para el desarrollo de tu empresa
+        </Subtitle>
+      </SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
-                  {service.icon}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+      <Grid cols="2" className="mb-12 sm:mb-20">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </Grid>
+    </div>
   );
 };
 
@@ -94,38 +82,25 @@ export const CriminalLawSection = () => {
   ];
 
   return (
-    <>
-      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
-        <div className="text-center mb-6 sm:mb-8">
-          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
-            Nuestros Servicios
-          </h2>
-          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
-            Defensa especializada para proteger tus derechos
-          </p>
-        </div>
+    <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+      <SectionHeader>
+        <Title>Nuestros Servicios</Title>
+        <Subtitle>
+          Defensa especializada para proteger tus derechos
+        </Subtitle>
+      </SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
-                  {service.icon}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+      <Grid cols="2" className="mb-12 sm:mb-20">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </Grid>
+    </div>
   );
 };
 
@@ -157,38 +132,25 @@ export const FamilyLawSection = () => {
   ];
 
   return (
-    <>
-      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
-        <div className="text-center mb-6 sm:mb-8">
-          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
-            Nuestros Servicios
-          </h2>
-          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
-            Acompañamiento sensible en momentos difíciles de la familia
-          </p>
-        </div>
+    <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+      <SectionHeader>
+        <Title>Nuestros Servicios</Title>
+        <Subtitle>
+          Acompañamiento sensible en momentos difíciles de la familia
+        </Subtitle>
+      </SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
-                  {service.icon}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+      <Grid cols="2" className="mb-12 sm:mb-20">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </Grid>
+    </div>
   );
 };
 
@@ -220,37 +182,24 @@ export const MediationSection = () => {
   ];
 
   return (
-    <>
-      <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
-        <div className="text-center mb-6 sm:mb-8">
-          <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
-            Nuestros Servicios
-          </h2>
-          <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
-            Soluciones pacíficas y eficientes para resolver conflictos
-          </p>
-        </div>
+    <div ref={servicesAnimation.elementRef} className={servicesAnimation.className}>
+      <SectionHeader>
+        <Title>Nuestros Servicios</Title>
+        <Subtitle>
+          Soluciones pacíficas y eficientes para resolver conflictos
+        </Subtitle>
+      </SectionHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
-              <div className="flex items-start space-x-3 sm:space-x-4">
-                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
-                  {service.icon}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+      <Grid cols="2" className="mb-12 sm:mb-20">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </Grid>
+    </div>
   );
 }; 

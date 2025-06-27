@@ -1,7 +1,6 @@
-import { FC } from 'react';
 import { Car, Heart, Building, Users, FileText, Shield, AlertTriangle, Scale } from 'lucide-react';
-import ContactForm from './ContactForm';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Container, Section, SectionHeader, Grid, Title, Subtitle, ServiceCard, IconCard, Card } from '@/components/design-system';
 
 const DamagesLawSection = () => {
   const accidentsAnimation = useScrollReveal();
@@ -74,77 +73,61 @@ const DamagesLawSection = () => {
 
   return (
     <>
-      {/* Accidentes de Tránsito */}
-        <div ref={accidentsAnimation.elementRef} className={accidentsAnimation.className}>
-          <div className="text-center mb-6 sm:mb-8">
-            <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
-              Accidentes de Tránsito
-            </h2>
-            <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Asesoramiento integral en siniestros viales y reclamos de seguros
-            </p>
-          </div>
+      <div ref={accidentsAnimation.elementRef} className={accidentsAnimation.className}>
+        <SectionHeader>
+          <Title>Accidentes de Tránsito</Title>
+          <Subtitle>
+            Asesoramiento integral en siniestros viales y reclamos de seguros
+          </Subtitle>
+        </SectionHeader>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-20">
-            {trafficAccidents.map((accident, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100">
-                <div className="text-center">
-                  <div className="bg-primary/10 rounded-full p-3 sm:p-4 w-fit mx-auto mb-3 sm:mb-4">
-                    {accident.icon}
-                  </div>
-                  <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-2 sm:mb-3">
-                    {accident.title}
+        <Grid cols="4" className="mb-12 sm:mb-20">
+          {trafficAccidents.map((accident, index) => (
+            <IconCard
+              key={index}
+              icon={accident.icon}
+              title={accident.title}
+              description={accident.description}
+            />
+          ))}
+        </Grid>
+      </div>
+
+      <div ref={civilAnimation.elementRef} className={civilAnimation.className}>
+        <SectionHeader>
+          <Title>Responsabilidad Civil</Title>
+          <Subtitle>
+            Cobertura integral en todos los aspectos de la responsabilidad civil
+          </Subtitle>
+        </SectionHeader>
+
+        <div className="space-y-6 sm:space-y-8 mb-12 sm:mb-20">
+          {civilResponsibilities.map((responsibility, index) => (
+            <Card key={index}>
+              <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
+                  <Scale className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-inter font-semibold text-sm sm:text-xl text-dark-gray mb-2 sm:mb-3">
+                    {responsibility.area}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    {accident.description}
+                  <p className="text-xs sm:text-base text-gray-600 mb-3 sm:mb-4">
+                    {responsibility.details}
                   </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-       
-
-        {/* Responsabilidad Civil */}
-        <div ref={civilAnimation.elementRef} className={civilAnimation.className}>
-          <div className="text-center mb-6 sm:mb-8">
-            <h2 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-dark-gray mb-3 sm:mb-4">
-              Responsabilidad Civil
-            </h2>
-            <p className="font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto">
-              Cobertura integral en todos los aspectos de la responsabilidad civil
-            </p>
-          </div>
-
-          <div className="space-y-6 sm:space-y-8 mb-12 sm:mb-20">
-            {civilResponsibilities.map((responsibility, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6">
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="flex-shrink-0 bg-primary/10 rounded-lg p-2 sm:p-3">
-                    <Scale className="h-4 w-4 sm:h-6 sm:w-6 text-primary" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-inter font-semibold text-sm sm:text-xl text-dark-gray mb-2 sm:mb-3">
-                      {responsibility.area}
-                    </h3>
-                    <p className="text-xs sm:text-base text-gray-600 mb-3 sm:mb-4">
-                      {responsibility.details}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {responsibility.cases.map((case_item, caseIndex) => (
-                        <span key={caseIndex} className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-primary/10 text-primary">
-                          {case_item}
-                        </span>
-                      ))}
-                    </div>
+                  <div className="flex flex-wrap gap-2">
+                    {responsibility.cases.map((case_item, caseIndex) => (
+                      <span key={caseIndex} className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-primary/10 text-primary">
+                        {case_item}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </Card>
+          ))}
         </div>
-
+      </div>
     </>
   );
 };
