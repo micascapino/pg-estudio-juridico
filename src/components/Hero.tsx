@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Container } from '@/components/design-system';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -25,7 +26,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-primary/60" />
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto animate-fade-in">
+      <Container className="relative z-10 text-center text-white max-w-4xl animate-fade-in">
         <h1 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-6xl leading-tight mb-4 sm:mb-6">
           Abogados especializados en soluciones legales
           <br />
@@ -52,7 +53,7 @@ const Hero = () => {
             Quiero Asesoramiento
           </Button>
         </div>
-      </div>
+      </Container>
 
   
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

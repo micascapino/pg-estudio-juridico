@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { Container, Section, Grid } from '@/components/design-system';
 
 const AnimatedCounters = () => {
   const [counters, setCounters] = useState({
@@ -16,6 +17,13 @@ const AnimatedCounters = () => {
     clients: 300,
     consultations: 1000
   };
+
+  const counterData = [
+    { key: 'years', value: counters.years, label: 'Años de Experiencia' },
+    { key: 'cases', value: counters.cases, label: 'Casos Resueltos' },
+    { key: 'clients', value: counters.clients, label: 'Clientes Satisfechos' },
+    { key: 'consultations', value: counters.consultations, label: 'Consultas Atendidas' }
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,7 +44,7 @@ const AnimatedCounters = () => {
   }, [hasAnimated]);
 
   const animateCounters = () => {
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
     const steps = 60;
     const increment = duration / steps;
 
@@ -61,47 +69,22 @@ const AnimatedCounters = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-20 bg-primary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          <div className="text-center">
-            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
-              {counters.years}+
+    <Section ref={sectionRef} className="bg-primary">
+      <Container>
+        <Grid cols="4" gap="md">
+          {counterData.map((counter, index) => (
+            <div key={index} className="text-center">
+              <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
+                {counter.value}+
+              </div>
+              <div className="font-inter text-white/80 text-xs sm:text-lg">
+                {counter.label}
+              </div>
             </div>
-            <div className="font-inter text-white/80 text-xs sm:text-lg">
-              Años de Experiencia
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
-              {counters.cases}+
-            </div>
-            <div className="font-inter text-white/80 text-xs sm:text-lg">
-              Casos Resueltos
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
-              {counters.clients}+
-            </div>
-            <div className="font-inter text-white/80 text-xs sm:text-lg">
-              Clientes Satisfechos
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
-              {counters.consultations}+
-            </div>
-            <div className="font-inter text-white/80 text-xs sm:text-lg">
-              Consultas Atendidas
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          ))}
+        </Grid>
+      </Container>
+    </Section>
   );
 };
 
