@@ -1,51 +1,64 @@
 
 import { useState } from 'react';
-import { Scale, Users, FileText, MessageSquare, Phone, Clock } from 'lucide-react';
+import { Scale, Users, FileText, MessageSquare, Phone, Clock, ArrowRight } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const practiceAreas = [
   {
     icon: Scale,
-    title: 'Derecho Civil',
-    description: 'Contratos, obligaciones, derechos reales y responsabilidad civil.',
-    color: 'bg-primary/10'
+    title: 'Derecho de Daños',
+    description: 'Responsabilidad civil, accidentes de tránsito y mala praxis médica.',
+    color: 'bg-primary/10',
+    route: '/derecho-danos'
   },
   {
     icon: Users,
     title: 'Derecho Laboral',
     description: 'Despidos, accidentes de trabajo y conflictos laborales.',
-    color: 'bg-primary/10'
+    color: 'bg-primary/10',
+    route: '/derecho-laboral'
   },
   {
     icon: FileText,
     title: 'Derecho Comercial',
     description: 'Sociedades, contratos comerciales y derecho empresarial.',
-    color: 'bg-primary/10'
+    color: 'bg-primary/10',
+    route: '/derecho-comercial'
   },
   {
     icon: MessageSquare,
     title: 'Derecho Penal',
     description: 'Defensa penal, querellas y mediación penal.',
-    color: 'bg-primary/10'
+    color: 'bg-primary/10',
+    route: '/derecho-penal'
   },
   {
     icon: Phone,
     title: 'Derecho de Familia',
     description: 'Divorcios, tenencia, cuota alimentaria y sucesiones.',
-    color: 'bg-primary/10'
+    color: 'bg-primary/10',
+    route: '/derecho-familia'
   },
   {
     icon: Clock,
     title: 'Mediación',
     description: 'Resolución alternativa de conflictos y mediación civil.',
-    color: 'bg-primary/10'
+    color: 'bg-primary/10',
+    route: '/mediacion'
   }
 ];
 
 const PracticeAreas = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
   const titleAnimation = useScrollReveal();
   const subtitleAnimation = useScrollReveal({ delay: 200 });
+
+  const handleNavigate = (route: string) => {
+    navigate(route);
+  };
 
   return (
     <section id="areas" className="py-20 bg-light-gray">
@@ -72,7 +85,7 @@ const PracticeAreas = () => {
               <div
                 key={index}
                 ref={cardAnimation.elementRef}
-                className={`bg-white rounded-xl p-8 shadow-custom hover:shadow-custom-hover transition-all duration-300 hover:-translate-y-2 group ${cardAnimation.className}`}
+                className={`bg-white rounded-xl p-8 shadow-custom hover:shadow-custom-hover transition-all duration-300 hover:-translate-y-2 group h-full flex flex-col ${cardAnimation.className}`}
               >
                 <div className={`w-16 h-16 ${area.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <area.icon className="h-8 w-8 text-primary" />
@@ -80,9 +93,16 @@ const PracticeAreas = () => {
                 <h3 className="font-poppins font-semibold text-xl text-dark-gray mb-3">
                   {area.title}
                 </h3>
-                <p className="font-inter text-gray-600 leading-relaxed">
+                <p className="font-inter text-gray-600 leading-relaxed mb-6 flex-grow">
                   {area.description}
                 </p>
+                <Button
+                  onClick={() => handleNavigate(area.route)}
+                  className="w-full group/btn border border-primary text-primary hover:bg-primary hover:text-white bg-transparent transition-all duration-300 mt-auto"
+                >
+                  Ver más
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                </Button>
               </div>
             );
           })}
@@ -91,22 +111,29 @@ const PracticeAreas = () => {
         {/* Mobile Carousel */}
         <div className="md:hidden">
           <div className="relative overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-300 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {practiceAreas.map((area, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-xl p-8 shadow-custom">
+                  <div className="bg-white rounded-xl p-8 shadow-custom h-full flex flex-col">
                     <div className={`w-16 h-16 ${area.color} rounded-full flex items-center justify-center mb-6`}>
                       <area.icon className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="font-poppins font-semibold text-xl text-dark-gray mb-3">
                       {area.title}
                     </h3>
-                    <p className="font-inter text-gray-600 leading-relaxed">
+                    <p className="font-inter text-gray-600 leading-relaxed mb-6 flex-grow">
                       {area.description}
                     </p>
+                    <Button
+                      onClick={() => handleNavigate(area.route)}
+                      className="w-full group/btn border border-primary text-primary hover:bg-primary hover:text-white bg-transparent transition-all duration-300 mt-auto"
+                    >
+                      Ver más
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </Button>
                   </div>
                 </div>
               ))}
@@ -119,9 +146,8 @@ const PracticeAreas = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                  index === currentSlide ? 'bg-primary' : 'bg-gray-300'
-                }`}
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === currentSlide ? 'bg-primary' : 'bg-gray-300'
+                  }`}
               />
             ))}
           </div>

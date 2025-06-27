@@ -21,17 +21,7 @@ const AboutSection = () => {
     <section id="nosotros" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Imagen */}
-          <div className="order-2 lg:order-1">
-            <div ref={imageAnimation.elementRef} className={imageAnimation.className}>
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-                alt="Equipo del Estudio Jurídico Mogliani"
-                className="rounded-2xl shadow-custom-hover w-full h-[500px] object-cover"
-              />
-            </div>
-          </div>
-
+        
           {/* Contenido */}
           <div className="order-1 lg:order-2">
             <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
@@ -42,7 +32,7 @@ const AboutSection = () => {
             
             <div ref={textAnimation.elementRef} className={textAnimation.className}>
               <p className="font-inter text-lg text-gray-600 mb-8 leading-relaxed">
-                En Estudio Jurídico Mogliani, nos especializamos en brindar soluciones 
+                En Estudio Jurídico Giambearrdino & Petrocco, nos especializamos en brindar soluciones 
                 legales integrales con un enfoque personalizado. Nuestro compromiso es 
                 acompañar a nuestros clientes en cada etapa del proceso legal, 
                 garantizando resultados exitosos y satisfactorios.

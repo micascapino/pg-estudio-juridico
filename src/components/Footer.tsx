@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <Scale className="h-8 w-8 text-primary mr-2" />
               <span className="font-poppins font-bold text-2xl">
-                Estudio Mogliani
+                Giambearrdino & Petrocco Abogados
               </span>
             </div>
             <p className="font-inter text-gray-300 mb-6 leading-relaxed max-w-md">
@@ -33,53 +33,27 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Enlaces Rápidos */}
-          <div>
-            <h3 className="font-poppins font-semibold text-lg mb-4">Enlaces Rápidos</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#inicio" className="font-inter text-gray-300 hover:text-primary transition-colors duration-300">
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a href="#areas" className="font-inter text-gray-300 hover:text-primary transition-colors duration-300">
-                  Áreas de Práctica
-                </a>
-              </li>
-              <li>
-                <a href="#nosotros" className="font-inter text-gray-300 hover:text-primary transition-colors duration-300">
-                  Nosotros
-                </a>
-              </li>
-              <li>
-                <a href="#blog" className="font-inter text-gray-300 hover:text-primary transition-colors duration-300">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
-
+          
           {/* Información de Contacto */}
           <div>
             <h3 className="font-poppins font-semibold text-lg mb-4">Contacto</h3>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="font-inter text-gray-300 text-sm">
-                  Av. Principal 123, Buenos Aires, Argentina
+                Bolívar 3053: Piso 7 Oficina “C”, Mar del Plata, Argentina
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="font-inter text-gray-300 text-sm">
-                  +54 11 1234-5678
+                  +54 223 4373938
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                 <span className="font-inter text-gray-300 text-sm">
-                  info@estudiomogliani.com.ar
+                  info@estudiojuridicogpmdp.com.ar
                 </span>
               </div>
               <div className="flex items-start space-x-3">
@@ -97,19 +71,9 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="font-inter text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Estudio Jurídico Mogliani. Todos los derechos reservados.
+              © {new Date().getFullYear()} Estudio Jurídico Giambearrdino & Petrocco. Todos los derechos reservados.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="font-inter text-gray-400 hover:text-primary text-sm transition-colors duration-300">
-                Política de Privacidad
-              </a>
-              <a href="#" className="font-inter text-gray-400 hover:text-primary text-sm transition-colors duration-300">
-                Términos de Uso
-              </a>
-              <a href="#" className="font-inter text-gray-400 hover:text-primary text-sm transition-colors duration-300">
-                Aviso Legal
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>
