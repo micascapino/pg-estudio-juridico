@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Menu, X, Scale, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Container, ButtonSystem, WhatsAppButton } from '@/components/design-system';
 
@@ -76,7 +76,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-primary mr-2" />
+              <img 
+                src="/logo-estudio-gp.png" 
+                alt="Giamberardino & Petrocco" 
+                className="h-8 w-8 sm:h-10 sm:w-10 object-cover mr-2"
+              />
               <span className="font-poppins font-bold text-sm sm:text-xl text-dark-gray">
                 Giamberardino & Petrocco
               </span>

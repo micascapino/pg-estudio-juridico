@@ -9,7 +9,11 @@ const Footer = () => {
           {/* Logo y Descripción */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-3 sm:mb-4">
-              <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-primary mr-2" />
+            <img 
+                src="/logo-estudio-gp.png" 
+                alt="Giamberardino & Petrocco" 
+                className="h-6 w-6 sm:h-8 sm:w-8 object-cover mr-2"
+              />
               <span className="font-poppins font-bold text-lg sm:text-2xl">
                 Giamberardino & Petrocco
               </span>
