@@ -1,31 +1,77 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Scale, ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Container, ButtonSystem, WhatsAppButton } from '@/components/design-system';
 
-const Navbar = () => {
+// Constantes de navegación
+const PRACTICE_AREAS = [
+  { path: '/derecho-laboral', label: 'Derecho Laboral' },
+  { path: '/derecho-danos', label: 'Derecho de Daños' },
+  { path: '/derecho-comercial', label: 'Derecho Comercial' },
+  { path: '/derecho-penal', label: 'Derecho Penal' },
+  { path: '/derecho-familia', label: 'Derecho de Familia' },
+  { path: '/mediacion', label: 'Mediación' }
+];
+
+const WHATSAPP_NUMBER = '5492234373938';
+
+// Hook personalizado para dropdown
+const useDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const navigate = useNavigate();
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
-  // Cerrar dropdown cuando se hace click fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setIsOpen(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  return { isOpen, setIsOpen, ref };
+};
+
+
+interface NavLinkProps {
+  to: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
+}
+
+const NavLink = ({ to, children, onClick, className = '' }: NavLinkProps) => (
+  <Link
+    to={to}
+    onClick={onClick}
+    className={`font-inter text-dark-gray hover:text-primary transition-colors duration-300 ${className}`}
+  >
+    {children}
+  </Link>
+);
+
+// Componente DropdownLink
+const DropdownLink = ({ to, children, onClick }: NavLinkProps) => (
+  <Link
+    to={to}
+    onClick={onClick}
+    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+  >
+    {children}
+  </Link>
+);
+
+const Navbar = () => {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const dropdown = useDropdown();
+
+  const closeMobileMenu = () => setIsMobileOpen(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -40,110 +86,72 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <Link to="/" className="font-inter text-dark-gray hover:text-primary transition-colors duration-300">
-                Inicio
-              </Link>
+              <NavLink to="/">Inicio</NavLink>
               
               {/* Dropdown Áreas de Práctica */}
-              <div className="relative" ref={dropdownRef}>
+              <div className="relative" ref={dropdown.ref}>
                 <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  onClick={() => dropdown.setIsOpen(!dropdown.isOpen)}
                   className="font-inter text-dark-gray hover:text-primary transition-colors duration-300 flex items-center"
                 >
                   Áreas de Práctica
-                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${dropdown.isOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
-                {isDropdownOpen && (
+                {dropdown.isOpen && (
                   <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
                     <div className="py-2">
-                      <Link 
-                        to="/derecho-laboral" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        Derecho Laboral
-                      </Link>
-                      <Link 
-                        to="/derecho-danos" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        Derecho de Daños
-                      </Link>
-                      <Link 
-                        to="/derecho-comercial" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        Derecho Comercial
-                      </Link>
-                      <Link 
-                        to="/derecho-penal" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        Derecho Penal
-                      </Link>
-                      <Link 
-                        to="/derecho-familia" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        Derecho de Familia
-                      </Link>
-                      <Link 
-                        to="/mediacion" 
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
-                      >
-                        Mediación
-                      </Link>
+                      {PRACTICE_AREAS.map(({ path, label }) => (
+                        <DropdownLink 
+                          key={path}
+                          to={path} 
+                          onClick={() => dropdown.setIsOpen(false)}
+                        >
+                          {label}
+                        </DropdownLink>
+                      ))}
                     </div>
                   </div>
                 )}
               </div>
               
-    
-              <Link to="/contacto" className="font-inter text-dark-gray hover:text-primary transition-colors duration-300">
-                Contacto
-              </Link>
+              <NavLink to="/contacto">Contacto</NavLink>
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button 
-              className="bg-primary hover:bg-primary-shade text-white font-medium px-4 lg:px-6 py-2 rounded-full transition-transform duration-150 hover:scale-105 text-sm"
-              onClick={() => window.open('https://wa.me/5492234373938', '_blank')}
+            <WhatsAppButton 
+              phone={WHATSAPP_NUMBER}
+              className="text-sm px-4 lg:px-6 py-2"
             >
               Consultanos
-            </Button>
+            </WhatsAppButton>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="bg-gray-50 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-      </div>
+      </Container>
 
       {/* Mobile menu */}
-      {isOpen && (
+      {isMobileOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 shadow-lg">
           <div className="px-3 pt-3 pb-4 space-y-2">
-            <Link
-              to="/"
-              className="font-inter text-dark-gray hover:text-primary hover:bg-gray-50 block px-3 py-2 text-sm font-medium rounded-md"
-              onClick={() => setIsOpen(false)}
+            <NavLink 
+              to="/" 
+              onClick={closeMobileMenu}
+              className="hover:bg-gray-50 block px-3 py-2 text-sm font-medium rounded-md"
             >
               Inicio
-            </Link>
+            </NavLink>
             
             {/* Áreas de Práctica - Móvil */}
             <div className="px-3 py-1">
@@ -151,69 +159,34 @@ const Navbar = () => {
                 Áreas de Práctica
               </div>
               <div className="pl-2 space-y-1">
-                <Link
-                  to="/derecho-laboral"
-                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Derecho Laboral
-                </Link>
-                <Link
-                  to="/derecho-danos"
-                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Derecho de Daños
-                </Link>
-                <Link
-                  to="/derecho-comercial"
-                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Derecho Comercial
-                </Link>
-                <Link
-                  to="/derecho-penal"
-                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Derecho Penal
-                </Link>
-                <Link
-                  to="/derecho-familia"
-                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Derecho de Familia
-                </Link>
-                <Link
-                  to="/mediacion"
-                  className="font-inter text-gray-700 hover:text-primary hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Mediación
-                </Link>
+                {PRACTICE_AREAS.map(({ path, label }) => (
+                  <NavLink
+                    key={path}
+                    to={path}
+                    onClick={closeMobileMenu}
+                    className="text-gray-700 hover:bg-gray-50 block py-2 px-2 text-sm rounded-md"
+                  >
+                    {label}
+                  </NavLink>
+                ))}
               </div>
             </div>
             
-            <Link
-              to="/contacto"
-              className="font-inter text-dark-gray hover:text-primary hover:bg-gray-50 block px-3 py-2 text-sm font-medium rounded-md"
-              onClick={() => setIsOpen(false)}
+            <NavLink 
+              to="/contacto" 
+              onClick={closeMobileMenu}
+              className="hover:bg-gray-50 block px-3 py-2 text-sm font-medium rounded-md"
             >
               Contacto
-            </Link>
+            </NavLink>
             
             <div className="px-3 pt-3">
-              <Button 
-                className="w-full bg-primary hover:bg-primary-shade text-white font-medium py-2.5 rounded-full text-sm"
-                onClick={() => {
-                  window.open('https://wa.me/5492234373938', '_blank');
-                  setIsOpen(false);
-                }}
+              <WhatsAppButton 
+                phone={WHATSAPP_NUMBER}
+                className="w-full"
               >
                 Consultanos
-              </Button>
+              </WhatsAppButton>
             </div>
           </div>
         </div>
