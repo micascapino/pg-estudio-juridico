@@ -13,7 +13,6 @@ const PRACTICE_AREAS = [
   { path: '/mediacion', label: 'Mediación' }
 ];
 
-// Hook personalizado para dropdown
 const useDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
