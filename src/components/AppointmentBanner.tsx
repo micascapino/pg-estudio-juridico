@@ -19,7 +19,7 @@ const AppointmentBanner = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const whatsappMessage = `Hola, soy ${formData.name}. Mi consulta es: ${formData.message}.`;
-    const whatsappUrl = `https://wa.me/5492234373938?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/5492235474966?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
