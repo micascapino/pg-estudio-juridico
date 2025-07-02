@@ -14,51 +14,163 @@ const AmparosDeSaludSection = () => {
         </h2>
         
         <p className="text-gray-600 mb-6 text-base sm:text-lg">
-          Nos especializamos en la protección de tus derechos en salud, garantizando el acceso a tratamientos médicos, medicamentos y prestaciones que las obras sociales y prepagas deben cubrir.
+          En Giamberardino – Petrocco & Asociados nos especializamos en acciones de amparo para garantizar el acceso efectivo al derecho a la salud.
+          Cuando obras sociales, prepagas o el Estado niegan o demoran la cobertura de tratamientos, medicaciones, cirugías o prestaciones esenciales, el amparo es la herramienta legal para exigir su cumplimiento en forma rápida y eficaz.
         </p>
 
         <div className="grid gap-6 md:gap-8">
           <div>
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
-              Servicios Especializados
+              ¿Qué cubren los amparos de salud?
             </h3>
+            <p className="text-gray-600 mb-4 text-base sm:text-lg">
+              Intervenimos en casos como:
+            </p>
             <ul className="space-y-4 text-gray-600">
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Cobertura de tratamientos médicos especializados</span>
+                <span className="text-base sm:text-lg">Cobertura de medicamentos de alto costo</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Autorización de medicamentos de alto costo</span>
+                <span className="text-base sm:text-lg">Cirugías complejas o bariátricas</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Cirugías y procedimientos complejos</span>
+                <span className="text-base sm:text-lg">Internaciones prolongadas o psiquiátricas</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Internaciones prolongadas</span>
+                <span className="text-base sm:text-lg">Tratamientos oncológicos</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Tratamientos de fertilización asistida</span>
+                <span className="text-base sm:text-lg">Fertilización asistida</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Prestaciones para personas con discapacidad</span>
+                <span className="text-base sm:text-lg">Rehabilitaciones y terapias prolongadas</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Cobertura integral para personas con discapacidad</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Reafiliación a obra social o prepaga</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Demoras o negativas arbitrarias</span>
               </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
-              Nuestro Compromiso
+              Nuestro enfoque
+            </h3>
+            <ul className="space-y-4 text-gray-600">
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Atención personalizada y humana</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Estrategia legal clara y eficaz</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Acceso rápido a medidas cautelares para cobertura inmediata</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Seguimiento constante del caso</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Confidencialidad y compromiso ético</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-50 rounded-lg p-6 sm:p-8">
+            <h3 className="text-xl font-semibold text-dark-gray mb-4">
+              Preguntas frecuentes
+            </h3>
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-dark-gray mb-2 text-base sm:text-lg">
+                  ¿Qué es un amparo de salud?
+                </h4>
+                <p className="text-gray-600 text-base sm:text-lg">
+                  Es una acción judicial rápida para garantizar el acceso a tratamientos médicos cuando la obra social, prepaga o el Estado lo niegan o demoran injustificadamente.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-dark-gray mb-2 text-base sm:text-lg">
+                  ¿Cuánto tiempo tarda?
+                </h4>
+                <p className="text-gray-600 text-base sm:text-lg">
+                  Depende del caso, pero al ser un proceso urgente suele resolverse en semanas, con posibilidad de obtener medidas cautelares inmediatas.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-dark-gray mb-2 text-base sm:text-lg">
+                  ¿Necesito abogado?
+                </h4>
+                <p className="text-gray-600 text-base sm:text-lg">
+                  Sí. Es un trámite judicial que requiere presentación profesional y argumentos claros para lograr la cobertura.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-dark-gray mb-2 text-base sm:text-lg">
+                  ¿Qué documentación necesito?
+                </h4>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="text-base sm:text-lg">Prescripción médica</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="text-base sm:text-lg">Negativa o silencio de la obra social/prepaga</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="text-base sm:text-lg">Carnet o constancia de afiliación</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="text-base sm:text-lg">Historia clínica</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="text-base sm:text-lg">DNI</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-dark-gray mb-2 text-base sm:text-lg">
+                  ¿Puedo reclamar si soy monotributista o trabajador independiente?
+                </h4>
+                <p className="text-gray-600 text-base sm:text-lg">
+                  Sí. El derecho a la salud es universal. Obras sociales y prepagas están obligadas a cubrir las prestaciones incluidas en el PMO y otras necesarias según el diagnóstico.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold text-dark-gray mb-4">
+              Defendé tu derecho a la salud
             </h3>
             <p className="text-gray-600 mb-4 text-base sm:text-lg">
-              Entendemos que el acceso a la salud es un derecho fundamental. Por eso, trabajamos incansablemente para garantizar que recibas la atención médica que necesitas, sin demoras ni obstáculos burocráticos.
+              Si tu obra social o prepaga rechaza cubrir un tratamiento, no esperes más.
+              En Giamberardino – Petrocco & Asociados te asesoramos y te acompañamos en cada paso para hacer valer tus derechos.
             </p>
             <p className="text-gray-600 text-base sm:text-lg">
-              Contamos con amplia experiencia en el manejo de amparos de salud, logrando resoluciones rápidas y efectivas para nuestros clientes.
+              Atendemos en Mar del Plata y en todo el país.
             </p>
           </div>
         </div>
@@ -77,8 +189,8 @@ const AmparosDeSalud = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Abogados Especialistas en Amparos de Salud en Mar del Plata"
-        description="Protegemos tu derecho a la salud. Amparos contra obras sociales y prepagas para tratamientos médicos, medicamentos de alto costo, cirugías y fertilización asistida en Mar del Plata."
-        keywords="amparos de salud Mar del Plata, abogados obras sociales, prepagas medicamentos alto costo, tratamientos médicos autorizaciones, fertilización asistida amparo, cirugías cobertura salud"
+        description="Especialistas en amparos de salud contra obras sociales y prepagas. Cobertura medicamentos alto costo, cirugías bariátricas, tratamientos oncológicos, fertilización asistida, internaciones psiquiátricas y rehabilitaciones en Mar del Plata."
+        keywords="amparos de salud Mar del Plata, medicamentos alto costo, cirugías bariátricas, tratamientos oncológicos, fertilización asistida, internaciones psiquiátricas, rehabilitaciones, cobertura discapacidad, reafiliación obra social, medidas cautelares salud"
         canonicalUrl="/amparos-de-salud"
         type="service"
       />
