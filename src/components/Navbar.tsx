@@ -86,18 +86,30 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
       <Container>
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex-1 min-w-0 mr-3">
             <Link to="/" onClick={handleNavigation} className="flex items-center">
               <img 
                 src="/logo-estudio-gp.png" 
                 alt="Giamberardino – Petrocco & Asociados" 
-                className="h-8 w-8 sm:h-10 sm:w-10 object-cover mr-2"
+                className="h-8 w-8 sm:h-10 sm:w-10 object-cover mr-2 flex-shrink-0"
               />
-              <span className="font-poppins font-bold text-sm sm:text-xl text-dark-gray">
-                Giamberardino – Petrocco & Asociados
-              </span>
+              <div className="min-w-0 flex-1">
+                {/* Título desktop */}
+                <span className="hidden sm:block font-poppins font-bold text-xl text-dark-gray">
+                  Giamberardino – Petrocco & Asociados
+                </span>
+                {/* Título mobile en dos líneas */}
+                <div className="block sm:hidden">
+                  <div className="font-poppins font-bold text-xs leading-tight text-dark-gray">
+                    Giamberardino – Petrocco
+                  </div>
+                  <div className="font-poppins font-bold text-xs leading-tight text-dark-gray">
+                    & Asociados
+                  </div>
+                </div>
+              </div>
             </Link>
           </div>
 
@@ -172,7 +184,7 @@ const Navbar = () => {
             
             {/* Áreas de Práctica - Móvil */}
             <div className="px-3 py-1">
-              <div className="font-inter text-dark-gray text-sm font-medium mb-2 text-gray-500 uppercase tracking-wide">
+              <div className="font-inter text-dark-gray text-sm font-medium mb-2 text-gray-500 tracking-wide">
                 Áreas de Práctica
               </div>
               <div className="pl-2 space-y-1">
@@ -197,13 +209,7 @@ const Navbar = () => {
               Contacto
             </NavLink>
             
-            <div className="px-3 pt-3">
-              <WhatsAppButton 
-                className="w-full"
-              >
-                Consultanos
-              </WhatsAppButton>
-            </div>
+            
           </div>
         </div>
       )}

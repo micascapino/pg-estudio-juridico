@@ -29,8 +29,8 @@ const Hero = () => {
       <Container className="relative z-10 text-center text-white max-w-6xl animate-fade-in">
         <h1 className="font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 sm:mb-6">
           Giamberardino – Petrocco & Asociados
-          <br className="sm:hidden" />
-          <span className="text-accent"> Estudio jurídico con enfoque integral</span>
+          <br />
+          <span className="text-accent">Estudio jurídico con enfoque integral</span>
         </h1>
 
         <p className="font-inter text-base sm:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto">
