@@ -37,6 +37,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://pg-estudio-juridico.vercel.app/contratos</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pg-estudio-juridico.vercel.app/propiedad-inmuebles</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://pg-estudio-juridico.vercel.app/contacto</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>

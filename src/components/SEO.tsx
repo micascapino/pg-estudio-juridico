@@ -29,7 +29,7 @@ const SEO = ({
         "name": "Giamberardino – Petrocco & Asociados",
         "description": description,
         "url": baseUrl,
-        "telephone": "+54-223-547-4966",
+        "telephone": "+542235474966",
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "AR",

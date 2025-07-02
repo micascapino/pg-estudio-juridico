@@ -47,7 +47,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
                 <span className="font-inter text-gray-300 text-xs sm:text-sm">
-                  WhatsApp: 223 547 4966
+                  WhatsApp: 2235474966
                 </span>
               </div>
               <div className="flex items-start space-x-2 sm:space-x-3">

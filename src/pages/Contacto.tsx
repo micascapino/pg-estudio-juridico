@@ -89,7 +89,7 @@ const Contacto = () => {
               <ContactInfoCard
                 icon={<Phone className="h-5 w-5 text-primary" />}
                 title="Teléfono"
-                content={<span className="font-semibold">+54 223 5474966</span>}
+                content={<span className="font-semibold">+54 2235474966</span>}
               />
 
               <ContactInfoCard

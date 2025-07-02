@@ -1,4 +1,4 @@
-import { Scale, Users, FileText, MessageSquare, Phone, Clock, ArrowRight, Heart, Building } from 'lucide-react';
+import { Scale, Users, FileText, MessageSquare, Phone, Clock, ArrowRight, Heart, Building, FileSignature, Home } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -43,6 +43,18 @@ const practiceAreas = [
     title: 'Consultoría Jurídica',
     description: 'Asesoramiento legal integral permanente para empresas y particulares.',
     route: '/consultoria-juridica'
+  },
+  {
+    icon: FileSignature,
+    title: 'Contratos',
+    description: 'Redacción, revisión y negociación de contratos civiles y comerciales.',
+    route: '/contratos'
+  },
+  {
+    icon: Home,
+    title: 'Propiedad y Bienes Inmuebles',
+    description: 'Compraventa, locaciones, desalojos, usucapión, subdivisiones y regularización de títulos.',
+    route: '/propiedad-inmuebles'
   }
 ];
 
@@ -104,7 +116,7 @@ const PracticeAreas = () => {
 
         {/* Desktop Grid */}
         <div className="hidden md:block">
-          <Grid cols="3">
+          <Grid cols="4">
             {practiceAreas.map((area, index) => (
               <PracticeAreaCard
                 key={area.route}

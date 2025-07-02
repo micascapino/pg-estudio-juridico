@@ -9,7 +9,9 @@ const PRACTICE_AREAS = [
   { path: '/derecho-familia', label: 'Derecho de Familia' },
   { path: '/sucesiones', label: 'Sucesiones' },
   { path: '/responsabilidad-civil', label: 'Responsabilidad Civil' },
-  { path: '/consultoria-juridica', label: 'Consultoría Jurídica' }
+  { path: '/consultoria-juridica', label: 'Consultoría Jurídica' },
+  { path: '/contratos', label: 'Contratos' },
+  { path: '/propiedad-inmuebles', label: 'Propiedad y Bienes Inmuebles' }
 ];
 
 const useDropdown = () => {
