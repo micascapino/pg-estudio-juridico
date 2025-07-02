@@ -9,6 +9,7 @@ import Sucesiones from "./pages/Sucesiones";
 import ResponsabilidadCivil from "./pages/ResponsabilidadCivil";
 import ConsultoriaJuridica from "./pages/ConsultoriaJuridica";
 import Contacto from "./pages/Contacto";
+import DerechoFamilia from "./pages/DerechoFamilia";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/amparos-de-salud" element={<AmparosDeSalud />} />
           <Route path="/sucesiones" element={<Sucesiones />} />
+          <Route path="/derecho-familia" element={<DerechoFamilia />} />
           <Route path="/responsabilidad-civil" element={<ResponsabilidadCivil />} />
           <Route path="/consultoria-juridica" element={<ConsultoriaJuridica />} />
           <Route path="/contacto" element={<Contacto />} />
