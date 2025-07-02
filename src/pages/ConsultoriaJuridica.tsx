@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
-import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import { PageHeader, ContentWithSidebar, Breadcrumbs } from '@/components/design-system';
 import SEO from '@/components/SEO';
 
 const ConsultoriaJuridicaSection = () => {
@@ -95,19 +95,31 @@ const ConsultoriaJuridicaSection = () => {
 };
 
 const ConsultoriaJuridica = () => {
+  const breadcrumbItems = [
+    { label: 'Servicios', href: '/#areas' },
+    { label: 'Consultoría Jurídica' }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Consultoría Jurídica Integral"
-        description="Asesoramiento legal integral para empresas y particulares. Constitución de sociedades, contratos, cumplimiento normativo. Estudio jurídico en Mar del Plata."
-        keywords="consultoría jurídica, asesoramiento legal, constitución sociedades, contratos, abogados empresas Mar del Plata"
+        title="Consultoría Jurídica Integral para Empresas en Mar del Plata"
+        description="Asesoramiento legal integral para empresas y particulares en Mar del Plata. Constitución de sociedades, contratos, cumplimiento normativo y planificación patrimonial."
+        keywords="consultoría jurídica Mar del Plata, asesoramiento legal empresas, constitución sociedades, contratos comerciales, abogados empresas, planificación patrimonial"
         canonicalUrl="/consultoria-juridica"
+        type="service"
       />
       
       <Navbar />
       
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </div>
+      
       <PageHeader 
-        title="Consultoría Jurídica"
+        title="Consultoría Jurídica en Mar del Plata"
         subtitle="Asesoramiento legal integral permanente para empresas y particulares, con enfoque preventivo y soluciones estratégicas."
       />
 

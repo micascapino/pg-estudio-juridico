@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
-import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import { PageHeader, ContentWithSidebar, Breadcrumbs } from '@/components/design-system';
 import SEO from '@/components/SEO';
 
 const SucesionesSection = () => {
@@ -68,19 +68,31 @@ const SucesionesSection = () => {
 };
 
 const Sucesiones = () => {
+  const breadcrumbItems = [
+    { label: 'Servicios', href: '/#areas' },
+    { label: 'Sucesiones' }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Abogados Especialistas en Sucesiones"
-        description="Asesoramiento integral en sucesiones y trámites judiciales. Declaratoria de herederos, testamentos, partición de bienes. Estudio jurídico en Mar del Plata."
-        keywords="sucesiones, declaratoria de herederos, testamentos, partición de bienes, abogados sucesiones Mar del Plata"
+        title="Abogados Especialistas en Sucesiones en Mar del Plata"
+        description="Asesoramiento integral en sucesiones y trámites judiciales en Mar del Plata. Declaratoria de herederos, testamentos, partición de bienes, liquidación sociedades conyugales."
+        keywords="sucesiones Mar del Plata, declaratoria de herederos, testamentos, partición bienes, liquidación sociedad conyugal, trámites sucesorios, avalúo bienes"
         canonicalUrl="/sucesiones"
+        type="service"
       />
       
       <Navbar />
       
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </div>
+      
       <PageHeader 
-        title="Sucesiones"
+        title="Sucesiones en Mar del Plata"
         subtitle="Asesoramiento integral y gestión de trámites judiciales para garantizar una transición ordenada del patrimonio familiar."
       />
 

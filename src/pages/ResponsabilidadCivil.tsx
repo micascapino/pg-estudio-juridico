@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
-import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import { PageHeader, ContentWithSidebar, Breadcrumbs } from '@/components/design-system';
 import SEO from '@/components/SEO';
 
 const ResponsabilidadCivilSection = () => {
@@ -71,19 +71,31 @@ const ResponsabilidadCivilSection = () => {
 };
 
 const ResponsabilidadCivil = () => {
+  const breadcrumbItems = [
+    { label: 'Servicios', href: '/#areas' },
+    { label: 'Responsabilidad Civil' }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Abogados Especialistas en Responsabilidad Civil"
-        description="Reclamos por daños y perjuicios. Accidentes de tránsito, mala praxis médica, responsabilidad contractual. Abogados especializados en Mar del Plata."
-        keywords="responsabilidad civil, daños y perjuicios, accidentes de tránsito, mala praxis médica, abogados Mar del Plata"
+        title="Abogados Especialistas en Responsabilidad Civil en Mar del Plata"
+        description="Reclamos por daños y perjuicios en Mar del Plata. Accidentes de tránsito, mala praxis médica, productos defectuosos, responsabilidad contractual y extracontractual."
+        keywords="responsabilidad civil Mar del Plata, daños y perjuicios, accidentes de tránsito, mala praxis médica, productos defectuosos, reclamos indemnización"
         canonicalUrl="/responsabilidad-civil"
+        type="service"
       />
       
       <Navbar />
       
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </div>
+      
       <PageHeader 
-        title="Responsabilidad Civil"
+        title="Responsabilidad Civil en Mar del Plata"
         subtitle="Reclamos por daños y perjuicios en todas sus modalidades, defendiendo tus derechos con estrategias legales efectivas."
       />
 

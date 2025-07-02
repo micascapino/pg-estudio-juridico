@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pg-estudio-juridico.vercel.app/sitemap.xml
+
+# Específico para Google
+User-agent: Googlebot
+Allow: /
+
+# Bloquear archivos innecesarios
+Disallow: /src/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /node_modules/
+
+# Crawl delay (opcional)
+Crawl-delay: 1 

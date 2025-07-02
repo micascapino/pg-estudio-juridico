@@ -16,4 +16,7 @@ export * from './Alert';
 export * from './Loading';
 
 // Visual Elements
-export * from './Icon'; 
+export * from './Icon';
+
+// Navigation
+export { default as Breadcrumbs } from './Breadcrumbs'; 

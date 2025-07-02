@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de IDs - Estudio Jurídico</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { padding: 10px; margin: 5px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .test-link { display: inline-block; margin: 5px; padding: 5px 10px; background: #007bff; color: white; text-decoration: none; border-radius: 3px; }
+        .test-link:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test de IDs y Enlaces</h1>
+    <p>Este archivo prueba que todos los IDs existen en tu sitio.</p>
+    
+    <h2>📋 IDs a verificar:</h2>
+    <div id="test-results"></div>
+    
+    <h2>🔗 Enlaces de prueba:</h2>
+    <a href="https://pg-estudio-juridico.vercel.app/#areas" class="test-link" target="_blank">Probar /#areas</a>
+    <a href="https://pg-estudio-juridico.vercel.app/" class="test-link" target="_blank">Ir a página principal</a>
+    
+    <h2>📝 Script para consola del navegador:</h2>
+    <pre style="background: #f8f9fa; padding: 15px; border-radius: 5px;">
+// Ejecuta esto en la consola de tu página principal:
+const idsToCheck = ['areas'];
+idsToCheck.forEach(id => {
+    const element = document.getElementById(id);
+    console.log(`ID "${id}":`, element ? '✅ EXISTE' : '❌ NO EXISTE');
+    if (element) {
+        console.log('Elemento encontrado:', element);
+    }
+});
+    </pre>
+
+    <script>
+        // Simulación de test (para cuando esté en el mismo dominio)
+        const testIds = [
+            { id: 'areas', description: 'Sección de servicios' },
+            { id: 'about', description: 'Sección acerca de' },
+            { id: 'contact', description: 'Sección contacto' }
+        ];
+
+        const resultsDiv = document.getElementById('test-results');
+        
+        testIds.forEach(test => {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'test-result';
+            
+            // Como estamos en un archivo separado, no podemos acceder al DOM real
+            // Esto es solo una demostración
+            resultDiv.innerHTML = `
+                <strong>${test.id}</strong> - ${test.description}<br>
+                <em>Para probar: Abre tu sitio y ejecuta el script de consola</em>
+            `;
+            resultDiv.className += ' error'; // Simulamos que necesita verificación manual
+            
+            resultsDiv.appendChild(resultDiv);
+        });
+    </script>
+</body>
+</html> 

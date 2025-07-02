@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
-import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import { PageHeader, ContentWithSidebar, Breadcrumbs } from '@/components/design-system';
 import SEO from '@/components/SEO';
 
 const AmparosDeSaludSection = () => {
@@ -68,19 +68,31 @@ const AmparosDeSaludSection = () => {
 };
 
 const AmparosDeSalud = () => {
+  const breadcrumbItems = [
+    { label: 'Servicios', href: '/#areas' },
+    { label: 'Amparos de Salud' }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Abogados Especialistas en Amparos de Salud"
-        description="Protegemos tu derecho a la salud. Amparos para tratamientos médicos, medicamentos, cirugías, fertilización asistida. Abogados especializados en Mar del Plata."
-        keywords="amparos de salud, obras sociales, prepagas, tratamientos médicos, medicamentos, abogados salud Mar del Plata"
+        title="Abogados Especialistas en Amparos de Salud en Mar del Plata"
+        description="Protegemos tu derecho a la salud. Amparos contra obras sociales y prepagas para tratamientos médicos, medicamentos de alto costo, cirugías y fertilización asistida en Mar del Plata."
+        keywords="amparos de salud Mar del Plata, abogados obras sociales, prepagas medicamentos alto costo, tratamientos médicos autorizaciones, fertilización asistida amparo, cirugías cobertura salud"
         canonicalUrl="/amparos-de-salud"
+        type="service"
       />
       
       <Navbar />
       
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4">
+          <Breadcrumbs items={breadcrumbItems} />
+        </div>
+      </div>
+      
       <PageHeader 
-        title="Amparos de Salud"
+        title="Amparos de Salud en Mar del Plata"
         subtitle="Protegemos tu derecho a la salud garantizando el acceso a tratamientos, medicamentos y prestaciones médicas esenciales."
       />
 

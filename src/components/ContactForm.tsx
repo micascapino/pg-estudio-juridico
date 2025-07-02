@@ -7,16 +7,12 @@ import { Card, Title, Body } from '@/components/design-system';
 
 interface ContactFormData {
   name: string;
-  whatsapp: string;
-  email: string;
   message: string;
 }
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
-    whatsapp: '',
-    email: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,15 +26,17 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (!formData.name || !formData.whatsapp || !formData.email || !formData.message) {
+    if (!formData.name || !formData.message) {
       setIsSubmitting(false);
       return;
     }
 
+    const whatsappMessage = `Hola, soy ${formData.name}. Mi consulta es: ${formData.message}.`;
+    const whatsappUrl = `https://wa.me/5492235474966?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+
     setFormData({
       name: '',
-      whatsapp: '',
-      email: '',
       message: ''
     });
     setIsSubmitting(false);
@@ -52,11 +50,11 @@ const ContactForm = () => {
             <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
           </div>
         </div>
-        <Title className="text-lg sm:text-2xl mb-2">
-          Consultá hoy un Abogado
+        <Title className="text-base sm:text-lg xl:text-xl mb-2 whitespace-nowrap">
+          Consulte hoy un Abogado
         </Title>
         <Body className="text-xs sm:text-base mt-2">
-          Completa el formulario y te contactaremos para brindarte el asesoramiento que necesitas.
+          Complete el formulario y conversaremos por Whatsapp.
         </Body>
       </div>
       
@@ -71,29 +69,9 @@ const ContactForm = () => {
           required
         />
         
-        <Input
-          type="tel"
-          name="whatsapp"
-          placeholder="WhatsApp (sin 0, sin 15)"
-          value={formData.whatsapp}
-          onChange={handleChange}
-          className="w-full bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary text-sm sm:text-base"
-          required
-        />
-        
-        <Input
-          type="email"
-          name="email"
-          placeholder="E-mail"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary text-sm sm:text-base"
-          required
-        />
-        
         <Textarea
           name="message"
-          placeholder="Comenta brevemente tu caso..."
+          placeholder="Comente brevemente su caso..."
           value={formData.message}
           onChange={handleChange}
           className="w-full bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary min-h-[80px] sm:min-h-[100px] resize-none text-sm sm:text-base"
@@ -105,7 +83,7 @@ const ContactForm = () => {
           disabled={isSubmitting}
           className="w-full bg-primary hover:bg-primary/90 text-white font-poppins font-semibold py-2.5 sm:py-3 text-xs sm:text-base"
         >
-          {isSubmitting ? 'ENVIANDO...' : 'QUIERO QUE ME CONTACTEN'}
+          {isSubmitting ? 'ENVIANDO...' : 'ENVIAR CONSULTA'}
         </Button>
       </form>
     </Card>
