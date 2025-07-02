@@ -1,10 +1,9 @@
-
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import PracticeAreas from '@/components/PracticeAreas';
 import AppointmentBanner from '@/components/AppointmentBanner';
 import AboutSection from '@/components/AboutSection';
-import AnimatedCounters from '@/components/AnimatedCounters';
+import MissionBanner from '@/components/AnimatedCounters';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import Footer from '@/components/Footer';
 
@@ -14,7 +13,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <PracticeAreas />
-      <AnimatedCounters />
+      <MissionBanner />
       <AboutSection />
       <AppointmentBanner />
       <WhatsAppFloat />

@@ -1,7 +1,7 @@
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
     const message = "Hola, me gustaría recibir asesoramiento legal. ¿Podrían ayudarme?";
-    const whatsappUrl = `https://wa.me/5492234373938?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/5492235474966?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
   return (

@@ -74,7 +74,7 @@ export const ButtonSystem = ({
 
 export const WhatsAppButton = ({ 
   message = "Hola, me gustaría recibir asesoramiento legal. ¿Podrían ayudarme?",
-  phone = "5492234373938",
+  phone = "5492235474966",
   children = "Contactar por WhatsApp",
   className = ''
 }: {

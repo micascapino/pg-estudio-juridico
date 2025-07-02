@@ -1,91 +1,29 @@
-import { useEffect, useState, useRef } from 'react';
-import { Container, Section, Grid } from '@/components/design-system';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { Container, Section } from '@/components/design-system';
 
-const AnimatedCounters = () => {
-  const [counters, setCounters] = useState({
-    years: 0,
-    cases: 0,
-    clients: 0,
-    consultations: 0
-  });
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  const finalValues = {
-    years: 15,
-    cases: 500,
-    clients: 300,
-    consultations: 1000
-  };
-
-  const counterData = [
-    { key: 'years', value: counters.years, label: 'Años de Experiencia' },
-    { key: 'cases', value: counters.cases, label: 'Casos Resueltos' },
-    { key: 'clients', value: counters.clients, label: 'Clientes Satisfechos' },
-    { key: 'consultations', value: counters.consultations, label: 'Consultas Atendidas' }
-  ];
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          animateCounters();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [hasAnimated]);
-
-  const animateCounters = () => {
-    const duration = 2000;
-    const steps = 60;
-    const increment = duration / steps;
-
-    Object.keys(finalValues).forEach((key) => {
-      const finalValue = finalValues[key as keyof typeof finalValues];
-      const stepValue = finalValue / steps;
-      let currentValue = 0;
-
-      const timer = setInterval(() => {
-        currentValue += stepValue;
-        if (currentValue >= finalValue) {
-          currentValue = finalValue;
-          clearInterval(timer);
-        }
-        
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(currentValue)
-        }));
-      }, increment);
-    });
-  };
+const MissionBanner = () => {
+  const quoteAnimation = useScrollReveal();
+  const authorAnimation = useScrollReveal({ delay: 300 });
 
   return (
-    <Section ref={sectionRef} className="bg-primary">
+    <Section className="bg-primary">
       <Container>
-        <Grid cols="4" gap="md">
-          {counterData.map((counter, index) => (
-            <div key={index} className="text-center">
-              <div className="font-poppins font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-1 sm:mb-2">
-                {counter.value}+
-              </div>
-              <div className="font-inter text-white/80 text-xs sm:text-lg">
-                {counter.label}
-              </div>
-            </div>
-          ))}
-        </Grid>
+        <div className="text-center max-w-4xl mx-auto py-8 sm:py-12">
+          <div ref={quoteAnimation.elementRef} className={quoteAnimation.className}>
+            <blockquote className="font-poppins text-xl sm:text-2xl lg:text-3xl text-white leading-relaxed mb-6 sm:mb-8">
+              "Nuestro objetivo es brindarte soluciones jurídicas claras, rápidas y efectivas."
+            </blockquote>
+          </div>
+          
+          <div ref={authorAnimation.elementRef} className={authorAnimation.className}>
+            <cite className="font-inter text-white/80 text-base sm:text-lg not-italic">
+              — Giamberardino – Petrocco & Asociados
+            </cite>
+          </div>
+        </div>
       </Container>
     </Section>
   );
 };
 
-export default AnimatedCounters;
+export default MissionBanner;

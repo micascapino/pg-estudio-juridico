@@ -26,16 +26,16 @@ const Hero = () => {
       <div className="absolute inset-0 bg-primary/60" />
 
       {/* Content */}
-      <Container className="relative z-10 text-center text-white max-w-4xl animate-fade-in">
-        <h1 className="font-poppins font-bold text-2xl sm:text-4xl lg:text-6xl leading-tight mb-4 sm:mb-6">
-          Abogados especializados en soluciones legales
-          <br />
-          <span className="text-accent">claras y efectivas.</span>
+      <Container className="relative z-10 text-center text-white max-w-6xl animate-fade-in">
+        <h1 className="font-poppins font-bold text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl leading-tight mb-4 sm:mb-6">
+          Giamberardino – Petrocco & Asociados
+          <br className="sm:hidden" />
+          <span className="text-accent"> Estudio jurídico con enfoque integral</span>
         </h1>
 
-        <p className="font-inter text-base sm:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 max-w-2xl mx-auto">
-          Más de 15 años de experiencia brindando asesoramiento legal integral
-          con un enfoque personalizado y resultados comprobados.
+        <p className="font-inter text-base sm:text-xl lg:text-2xl mb-6 sm:mb-8 text-white/90 max-w-3xl mx-auto">
+          Brindamos asesoramiento legal estratégico en Mar del Plata y en todo el país. 
+          Nuestra misión es defender tus derechos con compromiso, experiencia y cercanía.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">

@@ -4,36 +4,49 @@ import { Container, Section, Title, Body, Card } from '@/components/design-syste
 
 const AboutSection = () => {
   const values = [
-    'Más de 15 años de experiencia profesional',
-    'Enfoque personalizado en cada caso',
-    'Atención las 24 horas los 365 días',
-    'Equipo multidisciplinario especializado',
-    'Compromiso con la excelencia jurídica',
-    'Transparencia en honorarios y procesos'
+    'Conocimiento jurídico profundo',
+    'Estrategia procesal efectiva',
+    'Trato humano y empático',
+    'Atención personalizada',
+    'Confidencialidad garantizada',
+    'Acompañamiento integral'
+  ];
+
+  const workProcess = [
+    'Escuchamos tu consulta y la analizamos en detalle.',
+    'Evaluamos las opciones legales más eficaces.',
+    'Diseñamos una estrategia personalizada.',
+    'Te mantenemos informado en todo momento.',
+    'Defendemos tus derechos con compromiso y profesionalismo.'
   ];
 
   const titleAnimation = useScrollReveal();
   const textAnimation = useScrollReveal({ delay: 200 });
-  const missionAnimation = useScrollReveal({ delay: 600 });
+  const workTitleAnimation = useScrollReveal({ delay: 400 });
+  const workListAnimation = useScrollReveal({ delay: 600 });
 
   return (
     <Section id="nosotros" className="bg-white">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div className="order-1 lg:order-2">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
+          {/* Quiénes Somos - Lado Izquierdo */}
+          <div>
             <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-              <Title>Sobre Nosotros</Title>
+              <Title className="text-left">Quiénes Somos</Title>
             </div>
             
             <div ref={textAnimation.elementRef} className={textAnimation.className}>
               <Body className="mb-6 sm:mb-8">
-                En Estudio Jurídico Giamberardino & Petrocco, nos especializamos en brindar soluciones 
-                legales integrales con un enfoque personalizado. Nuestro compromiso es 
-                acompañar a nuestros clientes en cada etapa del proceso legal, 
-                garantizando resultados exitosos y satisfactorios.
+                En Giamberardino – Petrocco & Asociados somos abogados comprometidos con la defensa de los derechos de nuestros clientes.
+                Creemos en un ejercicio de la abogacía que combine conocimiento jurídico profundo, estrategia procesal y un trato humano y empático.
               </Body>
 
-              <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <Body className="mb-6 sm:mb-8">
+                Atendemos cada consulta de manera personalizada, evaluamos alternativas legales y acompañamos a nuestros clientes durante todo el proceso.
+                Nuestra trayectoria y especialización nos permiten ofrecer soluciones reales y eficaces, siempre respetando la confidencialidad y la confianza depositada en nuestro equipo.
+              </Body>
+
+              <div className="space-y-3 sm:space-y-4">
                 {values.map((value, index) => {
                   const valueAnimation = useScrollReveal({ delay: 300 + index * 100 });
                   return (
@@ -47,18 +60,38 @@ const AboutSection = () => {
                 })}
               </div>
             </div>
+          </div>
 
-            <div ref={missionAnimation.elementRef} className={missionAnimation.className}>
-              <Card variant="outlined" className="bg-light-gray">
-                <h3 className="font-poppins font-semibold text-base sm:text-xl text-dark-gray mb-2">
-                  Nuestra Misión
-                </h3>
-                <Body>
-                  Brindar asesoramiento jurídico de excelencia, construyendo relaciones 
-                  de confianza duraderas con nuestros clientes y contribuyendo al 
-                  desarrollo de una sociedad más justa.
-                </Body>
-              </Card>
+          {/* Cómo Trabajamos - Lado Derecho */}
+          <div>
+            <div ref={workTitleAnimation.elementRef} className={workTitleAnimation.className}>
+              <Title className="text-left">Cómo trabajamos</Title>
+            </div>
+            
+            <div ref={workListAnimation.elementRef} className={workListAnimation.className}>
+              <Body className="mb-6 sm:mb-8">
+                Nuestro objetivo es brindarte soluciones jurídicas claras, rápidas y efectivas:
+              </Body>
+
+              <div className="space-y-4 sm:space-y-6">
+                {workProcess.map((step, index) => {
+                  const stepAnimation = useScrollReveal({ delay: 700 + index * 100 });
+                  return (
+                    <div key={index} ref={stepAnimation.elementRef} className={`flex items-start space-x-3 sm:space-x-4 ${stepAnimation.className}`}>
+                      <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-full flex items-center justify-center">
+                        <span className="font-poppins font-bold text-white text-sm sm:text-base">
+                          {index + 1}
+                        </span>
+                      </div>
+                      <div className="pt-1">
+                        <Body className="text-gray-700 text-sm sm:text-base">
+                          {step}
+                        </Body>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

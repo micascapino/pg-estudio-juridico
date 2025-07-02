@@ -5,12 +5,11 @@ import { Container, WhatsAppButton } from '@/components/design-system';
 
 // Constantes de navegación
 const PRACTICE_AREAS = [
-  { path: '/derecho-laboral', label: 'Derecho Laboral' },
-  { path: '/derecho-danos', label: 'Derecho de Daños' },
-  { path: '/derecho-comercial', label: 'Derecho Comercial' },
-  { path: '/derecho-penal', label: 'Derecho Penal' },
+  { path: '/amparos-de-salud', label: 'Amparos de Salud' },
+  { path: '/sucesiones', label: 'Sucesiones' },
+  { path: '/responsabilidad-civil', label: 'Responsabilidad Civil' },
   { path: '/derecho-familia', label: 'Derecho de Familia' },
-  { path: '/mediacion', label: 'Mediación' }
+  { path: '/consultoria-juridica', label: 'Consultoría Jurídica' }
 ];
 
 const useDropdown = () => {
@@ -93,11 +92,11 @@ const Navbar = () => {
             <Link to="/" onClick={handleNavigation} className="flex items-center">
               <img 
                 src="/logo-estudio-gp.png" 
-                alt="Giamberardino & Petrocco" 
+                alt="Giamberardino – Petrocco & Asociados" 
                 className="h-8 w-8 sm:h-10 sm:w-10 object-cover mr-2"
               />
               <span className="font-poppins font-bold text-sm sm:text-xl text-dark-gray">
-                Giamberardino & Petrocco
+                Giamberardino – Petrocco & Asociados
               </span>
             </Link>
           </div>

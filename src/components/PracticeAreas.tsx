@@ -1,4 +1,4 @@
-import { Scale, Users, FileText, MessageSquare, Phone, Clock, ArrowRight } from 'lucide-react';
+import { Scale, Users, FileText, MessageSquare, Phone, Clock, ArrowRight, Heart, Building } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -15,40 +15,34 @@ import {
 
 const practiceAreas = [
   {
-    icon: Scale,
-    title: 'Derecho de Daños',
-    description: 'Responsabilidad civil, accidentes de tránsito y mala praxis médica.',
-    route: '/derecho-danos'
+    icon: Heart,
+    title: 'Amparos de Salud',
+    description: 'Cobertura de tratamientos, medicamentos, cirugías, internaciones prolongadas, fertilización asistida, discapacidad.',
+    route: '/amparos-de-salud'
   },
   {
     icon: Users,
-    title: 'Derecho Laboral',
-    description: 'Despidos, accidentes de trabajo y conflictos laborales.',
-    route: '/derecho-laboral'
-  },
-  {
-    icon: FileText,
-    title: 'Derecho Comercial',
-    description: 'Sociedades, contratos comerciales y derecho empresarial.',
-    route: '/derecho-comercial'
-  },
-  {
-    icon: MessageSquare,
-    title: 'Derecho Penal',
-    description: 'Defensa penal, querellas y mediación penal.',
-    route: '/derecho-penal'
-  },
-  {
-    icon: Phone,
     title: 'Derecho de Familia',
-    description: 'Divorcios, tenencia, cuota alimentaria y sucesiones.',
+    description: 'Divorcios, alimentos, cuidado personal, régimen de comunicación.',
     route: '/derecho-familia'
   },
   {
-    icon: Clock,
-    title: 'Mediación',
-    description: 'Resolución alternativa de conflictos y mediación civil.',
-    route: '/mediacion'
+    icon: FileText,
+    title: 'Sucesiones',
+    description: 'Asesoramiento y trámites judiciales para sucesiones.',
+    route: '/sucesiones'
+  },
+  {
+    icon: Scale,
+    title: 'Responsabilidad Civil',
+    description: 'Reclamos por daños y perjuicios en todas sus modalidades.',
+    route: '/responsabilidad-civil'
+  },
+  {
+    icon: Building,
+    title: 'Consultoría Jurídica',
+    description: 'Asesoramiento legal integral permanente para empresas y particulares.',
+    route: '/consultoria-juridica'
   }
 ];
 
@@ -98,12 +92,12 @@ const PracticeAreas = () => {
       <Container>
         <SectionHeader>
           <div ref={titleAnimation.elementRef} className={titleAnimation.className}>
-            <Title>Áreas de Práctica</Title>
+            <Title>Servicios</Title>
           </div>
           <div ref={subtitleAnimation.elementRef} className={subtitleAnimation.className}>
             <Subtitle>
-              Brindamos asesoramiento especializado en diversas ramas del derecho
-              con un enfoque integral y personalizado.
+              Especialidades y áreas de práctica con enfoque personalizado
+              y soluciones jurídicas efectivas.
             </Subtitle>
           </div>
         </SectionHeader>
@@ -124,7 +118,7 @@ const PracticeAreas = () => {
 
         {/* Mobile Carousel */}
         <div className="md:hidden">
-          <Carousel>
+          <Carousel showArrows={true} showDots={true}>
             {practiceAreas.map((area) => (
               <ServiceCard
                 key={area.route}
