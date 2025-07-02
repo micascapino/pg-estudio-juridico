@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
 import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import SEO from '@/components/SEO';
 
 const SucesionesSection = () => {
   return (
@@ -69,6 +70,13 @@ const SucesionesSection = () => {
 const Sucesiones = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Abogados Especialistas en Sucesiones"
+        description="Asesoramiento integral en sucesiones y trámites judiciales. Declaratoria de herederos, testamentos, partición de bienes. Estudio jurídico en Mar del Plata."
+        keywords="sucesiones, declaratoria de herederos, testamentos, partición de bienes, abogados sucesiones Mar del Plata"
+        canonicalUrl="/sucesiones"
+      />
+      
       <Navbar />
       
       <PageHeader 

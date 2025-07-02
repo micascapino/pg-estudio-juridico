@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
 import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import SEO from '@/components/SEO';
 
 const ConsultoriaJuridicaSection = () => {
   return (
@@ -96,6 +97,13 @@ const ConsultoriaJuridicaSection = () => {
 const ConsultoriaJuridica = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Consultoría Jurídica Integral"
+        description="Asesoramiento legal integral para empresas y particulares. Constitución de sociedades, contratos, cumplimiento normativo. Estudio jurídico en Mar del Plata."
+        keywords="consultoría jurídica, asesoramiento legal, constitución sociedades, contratos, abogados empresas Mar del Plata"
+        canonicalUrl="/consultoria-juridica"
+      />
+      
       <Navbar />
       
       <PageHeader 

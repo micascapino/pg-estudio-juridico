@@ -1,19 +1,27 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import PracticeAreas from '@/components/PracticeAreas';
-import AppointmentBanner from '@/components/AppointmentBanner';
 import AboutSection from '@/components/AboutSection';
-import MissionBanner from '@/components/AnimatedCounters';
-import WhatsAppFloat from '@/components/WhatsAppFloat';
+import PracticeAreas from '@/components/PracticeAreas';
+import AnimatedCounters from '@/components/MissionBanner';
+import AppointmentBanner from '@/components/AppointmentBanner';
 import Footer from '@/components/Footer';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
+import SEO from '@/components/SEO';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Giamberardino – Petrocco & Asociados - Abogados Especialistas en Mar del Plata"
+        description="Estudio jurídico especializado en amparos de salud, derecho de familia, sucesiones y responsabilidad civil. Más de 15 años de experiencia en Mar del Plata."
+        keywords="abogados Mar del Plata, estudio jurídico, amparos de salud, derecho de familia, sucesiones, responsabilidad civil, consultoría jurídica"
+        canonicalUrl="/"
+      />
+      
       <Navbar />
       <Hero />
       <PracticeAreas />
-      <MissionBanner />
+      <AnimatedCounters />
       <AboutSection />
       <AppointmentBanner />
       <WhatsAppFloat />

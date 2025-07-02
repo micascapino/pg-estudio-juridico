@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
 import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import SEO from '@/components/SEO';
 
 const AmparosDeSaludSection = () => {
   return (
@@ -69,6 +70,13 @@ const AmparosDeSaludSection = () => {
 const AmparosDeSalud = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Abogados Especialistas en Amparos de Salud"
+        description="Protegemos tu derecho a la salud. Amparos para tratamientos médicos, medicamentos, cirugías, fertilización asistida. Abogados especializados en Mar del Plata."
+        keywords="amparos de salud, obras sociales, prepagas, tratamientos médicos, medicamentos, abogados salud Mar del Plata"
+        canonicalUrl="/amparos-de-salud"
+      />
+      
       <Navbar />
       
       <PageHeader 

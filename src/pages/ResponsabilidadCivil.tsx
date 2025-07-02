@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ContactForm from '@/components/ContactForm';
 import { PageHeader, ContentWithSidebar } from '@/components/design-system';
+import SEO from '@/components/SEO';
 
 const ResponsabilidadCivilSection = () => {
   return (
@@ -72,6 +73,13 @@ const ResponsabilidadCivilSection = () => {
 const ResponsabilidadCivil = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Abogados Especialistas en Responsabilidad Civil"
+        description="Reclamos por daños y perjuicios. Accidentes de tránsito, mala praxis médica, responsabilidad contractual. Abogados especializados en Mar del Plata."
+        keywords="responsabilidad civil, daños y perjuicios, accidentes de tránsito, mala praxis médica, abogados Mar del Plata"
+        canonicalUrl="/responsabilidad-civil"
+      />
+      
       <Navbar />
       
       <PageHeader 

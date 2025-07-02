@@ -6,9 +6,9 @@ import { Container, WhatsAppButton } from '@/components/design-system';
 // Constantes de navegación
 const PRACTICE_AREAS = [
   { path: '/amparos-de-salud', label: 'Amparos de Salud' },
+  { path: '/derecho-familia', label: 'Derecho de Familia' },
   { path: '/sucesiones', label: 'Sucesiones' },
   { path: '/responsabilidad-civil', label: 'Responsabilidad Civil' },
-  { path: '/derecho-familia', label: 'Derecho de Familia' },
   { path: '/consultoria-juridica', label: 'Consultoría Jurídica' }
 ];
 
