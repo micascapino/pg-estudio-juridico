@@ -54,7 +54,7 @@ const AboutSection = () => {
                       <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-primary/10 rounded-full flex items-center justify-center mt-0.5">
                         <Check className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
                       </div>
-                      <span className="font-inter text-xs sm:text-base text-gray-700">{value}</span>
+                      <span className="font-inter text-sm sm:text-base text-gray-700">{value}</span>
                     </div>
                   );
                 })}
