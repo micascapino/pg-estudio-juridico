@@ -13,7 +13,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Giamberardino – Petrocco & Asociados - Abogados Especialistas en Mar del Plata"
-        description="Estudio jurídico especializado en amparos de salud, derecho de familia, sucesiones y responsabilidad civil. Más de 15 años de experiencia en Mar del Plata."
+        description="Estudio jurídico especializado en amparos de salud, derecho de familia, sucesiones y responsabilidad civil."
         keywords="abogados Mar del Plata, estudio jurídico, amparos de salud, derecho de familia, sucesiones, responsabilidad civil, consultoría jurídica"
         canonicalUrl="/"
       />

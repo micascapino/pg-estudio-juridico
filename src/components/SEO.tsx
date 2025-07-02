@@ -180,7 +180,7 @@ const SEO = ({
       <meta property="og:image:type" content="image/png" />
       <meta property="og:locale" content="es_AR" />
       <meta property="og:site_name" content="Giamberardino – Petrocco & Asociados" />
-      {canonicalUrl && <meta property="og:url" content={`${baseUrl}${canonicalUrl}`} />}
+      <meta property="og:url" content={canonicalUrl ? `${baseUrl}${canonicalUrl}` : baseUrl} />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
