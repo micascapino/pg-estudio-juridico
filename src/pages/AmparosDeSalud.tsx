@@ -29,39 +29,67 @@ const AmparosDeSaludSection = () => {
             <ul className="space-y-4 text-gray-600">
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Cobertura de medicamentos de alto costo</span>
+                <span className="text-base sm:text-lg">Cobertura de medicamentos de alto costo (biológicos, oncológicos, tratamientos crónicos)</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Cirugías complejas o bariátricas</span>
+                <span className="text-base sm:text-lg">Cirugías complejas o bariátricas denegadas o demoradas</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Internaciones prolongadas o psiquiátricas</span>
+                <span className="text-base sm:text-lg">Internaciones prolongadas o psiquiátricas rechazadas por la obra social/prepaga</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Tratamientos oncológicos</span>
+                <span className="text-base sm:text-lg">Tratamientos oncológicos completos, quimioterapia y radioterapia</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Fertilización asistida</span>
+                <span className="text-base sm:text-lg">Fertilización asistida y tratamientos de reproducción médicamente asistida</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Rehabilitaciones y terapias prolongadas</span>
+                <span className="text-base sm:text-lg">Rehabilitaciones y terapias prolongadas (kinesiología, fonoaudiología, neurorehabilitación)</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Cobertura integral para personas con discapacidad</span>
+                <span className="text-base sm:text-lg">Cobertura integral para personas con discapacidad (medicación, tratamientos, transporte, asistentes personales)</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Reafiliación a obra social o prepaga</span>
+                <span className="text-base sm:text-lg">Reafiliación o reinscripción a obra social o prepaga tras bajas injustificadas</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-base sm:text-lg">Demoras o negativas arbitrarias</span>
+                <span className="text-base sm:text-lg">Demoras o negativas arbitrarias en autorizaciones médicas</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Cobertura de implantes médicos (válvulas, stents, lentes intraoculares, prótesis)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Estudios diagnósticos de alta complejidad negados o limitados</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Cobertura de insumos médicos descartables o permanentes (bombas de insulina, dispositivos)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Atención domiciliaria o cuidados paliativos cuando están indicados</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Internación en centros especializados (clínicas de salud mental, centros de rehabilitación)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Transporte sanitario o traslados para tratamientos</span>
+              </li>
+              <li className="flex items-start">
+                <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                <span className="text-base sm:text-lg">Medicamentos huérfanos para enfermedades poco frecuentes</span>
               </li>
             </ul>
           </div>
@@ -189,8 +217,9 @@ const AmparosDeSalud = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Abogados Especialistas en Amparos de Salud en Mar del Plata"
-        description="Especialistas en amparos de salud contra obras sociales y prepagas. Cobertura medicamentos alto costo, cirugías bariátricas, tratamientos oncológicos, fertilización asistida, internaciones psiquiátricas y rehabilitaciones en Mar del Plata."
+        description="Defendemos tu derecho a la salud con amparos efectivos. Cobertura de medicamentos de alto costo, cirugías bariátricas, tratamientos oncológicos, fertilización asistida e internaciones. Estudio Giamberardino - Petrocco & Asociados."
         keywords="amparos de salud Mar del Plata, medicamentos alto costo, cirugías bariátricas, tratamientos oncológicos, fertilización asistida, internaciones psiquiátricas, rehabilitaciones, cobertura discapacidad, reafiliación obra social, medidas cautelares salud"
+        ogImage="https://pg-estudio-juridico.vercel.app/logo-estudio-gp.png"
         canonicalUrl="/amparos-de-salud"
         type="service"
       />

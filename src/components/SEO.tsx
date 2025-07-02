@@ -10,9 +10,9 @@ interface SEOProps {
 }
 
 const SEO = ({ 
-  title = "Giamberardino – Petrocco & Asociados - Abogados Especialistas",
-  description = "Estudio jurídico especializado en derecho civil, penal y comercial. Más de 15 años de experiencia brindando asesoramiento legal de calidad.",
-  keywords = "abogados, estudio jurídico, derecho civil, derecho penal, derecho comercial, Mar del Plata, asesoramiento legal",
+  title = "Giamberardino – Petrocco & Asociados - Abogados Especialistas en Mar del Plata",
+  description = "Estudio jurídico especializado en amparos de salud, derecho de familia, sucesiones, contratos e inmuebles. Asesoramiento legal profesional en Mar del Plata.",
+  keywords = "abogados Mar del Plata, estudio jurídico, amparos salud, derecho familia, sucesiones, contratos, inmuebles, asesoramiento legal",
   ogImage = "https://pg-estudio-juridico.vercel.app/logo-estudio-gp.png",
   canonicalUrl,
   type = 'website'
@@ -53,10 +53,12 @@ const SEO = ({
         ],
         "serviceType": [
           "Amparos de Salud",
-          "Derecho de Familia",
+          "Derecho de Familia", 
           "Sucesiones",
           "Responsabilidad Civil",
-          "Consultoría Jurídica"
+          "Consultoría Jurídica",
+          "Contratos",
+          "Propiedad y Bienes Inmuebles"
         ],
         "priceRange": "$$",
         "hasOfferCatalog": {
@@ -93,6 +95,22 @@ const SEO = ({
                 "@type": "Service",
                 "name": "Responsabilidad Civil", 
                 "description": "Accidentes de tránsito y daños y perjuicios"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Contratos",
+                "description": "Redacción, revisión y negociación de contratos civiles y comerciales"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Propiedad y Bienes Inmuebles",
+                "description": "Operaciones inmobiliarias, compraventa, locaciones y usucapión"
               }
             }
           ]
@@ -156,15 +174,17 @@ const SEO = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:alt" content="Giamberardino - Petrocco & Asociados - Estudio Jurídico en Mar del Plata" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:locale" content="es_AR" />
       <meta property="og:site_name" content="Giamberardino – Petrocco & Asociados" />
       {canonicalUrl && <meta property="og:url" content={`${baseUrl}${canonicalUrl}`} />}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@estudioGiamberardino & Petrocco" />
+      <meta name="twitter:site" content="@estudioGP" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />

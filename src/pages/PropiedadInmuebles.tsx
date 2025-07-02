@@ -162,8 +162,9 @@ const PropiedadInmuebles = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Derecho Inmobiliario en Mar del Plata | Compraventa y Locaciones"
-        description="Especialistas en derecho inmobiliario. Contratos compraventa, boletos reserva, locaciones urbanas rurales, juicios desalojo, usucapión, subdivisiones, regularización títulos propiedad en Mar del Plata."
+        description="Operaciones inmobiliarias seguras con respaldo legal. Compraventa, locaciones, desalojos, usucapión y regularización de títulos. Protege tu propiedad con asesoramiento profesional. Estudio Giamberardino - Petrocco & Asociados."
         keywords="derecho inmobiliario Mar del Plata, contratos compraventa, boletos reserva, locaciones urbanas rurales, juicios desalojo, usucapión prescripción adquisitiva, subdivisiones, propiedad horizontal, regularización títulos, conflictos límites medianería"
+        ogImage="https://pg-estudio-juridico.vercel.app/logo-estudio-gp.png"
         canonicalUrl="/propiedad-inmuebles"
         type="service"
       />

@@ -166,8 +166,9 @@ const Contratos = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Contratos Civiles y Comerciales en Mar del Plata | Redacción y Revisión"
-        description="Especialistas en redacción, revisión y negociación de contratos. Contratos de locación, compraventa, servicios, convenios entre socios, cartas de intención y acuerdos preliminares en Mar del Plata."
+        description="Redacción y revisión profesional de contratos. Prevención de conflictos con análisis detallado de cláusulas. Asesorate antes de firmar y toma decisiones seguras. Estudio Giamberardino - Petrocco & Asociados."
         keywords="contratos civiles comerciales Mar del Plata, redacción contratos, revisión contratos, negociación cláusulas, contratos locación alquiler, contratos compraventa, contratos servicios, convenios socios, cartas intención, acuerdos preliminares"
+        ogImage="https://pg-estudio-juridico.vercel.app/logo-estudio-gp.png"
         canonicalUrl="/contratos"
         type="service"
       />

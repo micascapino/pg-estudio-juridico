@@ -158,8 +158,9 @@ const ConsultoriaJuridica = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Consultoría Jurídica Permanente Mar del Plata | Asesoramiento Empresas"
-        description="Consultoría jurídica permanente para empresas, profesionales e instituciones. Asesoramiento legal integral civil, comercial, laboral, familia. Redacción contratos, prevención conflictos, negociaciones extrajudiciales, auditoría documentación en Mar del Plata."
+        description="Asesoramiento jurídico continuo para empresas y particulares. Prevención de conflictos, redacción de contratos y decisiones estratégicas seguras. Tu consulta legal siempre a mano. Estudio Giamberardino - Petrocco & Asociados."
         keywords="consultoría jurídica permanente Mar del Plata, asesoramiento legal empresas, redacción análisis contratos, prevención conflictos reclamos, negociaciones extrajudiciales, orientación legal decisiones estratégicas, auditoría documentación procesos, atención preferencial continua"
+        ogImage="https://pg-estudio-juridico.vercel.app/logo-estudio-gp.png"
         canonicalUrl="/consultoria-juridica"
         type="service"
       />

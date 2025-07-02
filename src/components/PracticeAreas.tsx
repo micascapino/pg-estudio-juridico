@@ -35,7 +35,7 @@ const practiceAreas = [
   {
     icon: Scale,
     title: 'Responsabilidad Civil',
-    description: 'Reclamos por daños y perjuicios en todas sus modalidades.',
+    description: 'Reclamos por daños y perjuicios, accidentes de tránsito, mala praxis médica y negociación con seguros.',
     route: '/responsabilidad-civil'
   },
   {

@@ -165,8 +165,9 @@ const DerechoFamilia = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Derecho de Familia en Mar del Plata | Divorcios, Tenencia y Alimentos"
-        description="Abogados especialistas en derecho de familia. Divorcios consensuados y contenciosos, cuidado personal, régimen de comunicación, alimentos, violencia familiar, adopciones, acuerdos parentales y mediación familiar en Mar del Plata."
+        description="Asesoramiento familiar con respeto y profesionalismo. Divorcios, cuidado personal, régimen de comunicación, alimentos y acuerdos parentales. Tu familia merece el mejor acompañamiento legal. Estudio Giamberardino - Petrocco & Asociados."
         keywords="derecho de familia Mar del Plata, divorcios consensuados contenciosos, cuidado personal tenencia, régimen comunicación, alimentos fijación actualización, violencia familiar medidas protección, adopciones, acuerdos parentales, mediación familiar, filiación"
+        ogImage="https://pg-estudio-juridico.vercel.app/logo-estudio-gp.png"
         canonicalUrl="/derecho-familia"
         type="service"
       />

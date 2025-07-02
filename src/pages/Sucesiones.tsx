@@ -177,8 +177,9 @@ const Sucesiones = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Sucesiones en Mar del Plata | Juicios Sucesorios y Declaratoria de Herederos"
-        description="Especialistas en trámites sucesorios completos. Declaratoria de herederos, inscripción bienes inmuebles, partición herencia, aceptación renuncia herencia, sucesiones con y sin testamento, acuerdos entre herederos en Mar del Plata."
+        description="Tramitación completa de sucesiones con respeto y claridad. Declaratoria de herederos, partición de herencia, regularización de bienes. Te acompañamos en momentos difíciles. Estudio Giamberardino - Petrocco & Asociados."
         keywords="sucesiones Mar del Plata, juicios sucesorios, declaratoria herederos, inscripción bienes inmuebles, partición herencia, aceptación renuncia herencia, sucesiones testamento, acuerdos herederos, regularización bienes heredados, trámites judiciales sucesión"
+        ogImage="https://pg-estudio-juridico.vercel.app/logo-estudio-gp.png"
         canonicalUrl="/sucesiones"
         type="service"
       />
