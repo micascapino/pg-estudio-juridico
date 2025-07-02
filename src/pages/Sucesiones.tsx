@@ -92,7 +92,7 @@ const Sucesiones = () => {
       </div>
       
       <PageHeader 
-        title="Sucesiones en Mar del Plata"
+        title="Sucesiones"
         subtitle="Asesoramiento integral y gestión de trámites judiciales para garantizar una transición ordenada del patrimonio familiar."
       />
 

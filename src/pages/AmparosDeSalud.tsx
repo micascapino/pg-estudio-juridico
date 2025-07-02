@@ -92,7 +92,7 @@ const AmparosDeSalud = () => {
       </div>
       
       <PageHeader 
-        title="Amparos de Salud en Mar del Plata"
+        title="Amparos de Salud"
         subtitle="Protegemos tu derecho a la salud garantizando el acceso a tratamientos, medicamentos y prestaciones médicas esenciales."
       />
 

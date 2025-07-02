@@ -31,7 +31,7 @@ const DerechoFamilia = () => {
       </div>
       
       <PageHeader 
-        title="Derecho de Familia en Mar del Plata"
+        title="Derecho de Familia"
         subtitle="Asesoramiento sensible y profesional en divorcios, tenencia, cuota alimentaria y régimen de visitas, priorizando el bienestar familiar."
       />
 

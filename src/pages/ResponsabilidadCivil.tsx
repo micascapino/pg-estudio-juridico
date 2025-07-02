@@ -95,7 +95,7 @@ const ResponsabilidadCivil = () => {
       </div>
       
       <PageHeader 
-        title="Responsabilidad Civil en Mar del Plata"
+        title="Responsabilidad Civil"
         subtitle="Reclamos por daños y perjuicios en todas sus modalidades, defendiendo tus derechos con estrategias legales efectivas."
       />
 

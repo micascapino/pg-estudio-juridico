@@ -119,7 +119,7 @@ const ConsultoriaJuridica = () => {
       </div>
       
       <PageHeader 
-        title="Consultoría Jurídica en Mar del Plata"
+        title="Consultoría Jurídica"
         subtitle="Asesoramiento legal integral permanente para empresas y particulares, con enfoque preventivo y soluciones estratégicas."
       />
 
