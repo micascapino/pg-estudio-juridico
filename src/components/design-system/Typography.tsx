@@ -12,13 +12,13 @@ export const Title = ({ children, className = '' }: TypographyProps) => (
 );
 
 export const Subtitle = ({ children, className = '' }: TypographyProps) => (
-  <p className={`font-inter text-sm sm:text-xl text-gray-600 max-w-4xl mx-auto ${className}`}>
+  <p className={`font-inter text-base sm:text-xl text-gray-600 max-w-4xl mx-auto ${className}`}>
     {children}
   </p>
 );
 
 export const Body = ({ children, className = '' }: TypographyProps) => (
-  <p className={`font-inter text-xs sm:text-base text-gray-600 leading-relaxed ${className}`}>
+  <p className={`font-inter text-base sm:text-lg text-gray-600 leading-relaxed ${className}`}>
     {children}
   </p>
 );
@@ -30,7 +30,7 @@ export const CardTitle = ({ children, className = '' }: TypographyProps) => (
 );
 
 export const CardDescription = ({ children, className = '' }: TypographyProps) => (
-  <p className={`text-xs sm:text-sm text-gray-600 ${className}`}>
+  <p className={`text-sm sm:text-base text-gray-600 ${className}`}>
     {children}
   </p>
 ); 

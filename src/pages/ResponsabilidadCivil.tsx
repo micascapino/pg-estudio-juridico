@@ -13,7 +13,7 @@ const ResponsabilidadCivilSection = () => {
           Responsabilidad Civil
         </h2>
         
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 text-base sm:text-lg">
           Nos especializamos en reclamos por daños y perjuicios en todas sus modalidades, defendiendo tus derechos ante situaciones que hayan causado perjuicios patrimoniales o morales.
         </p>
 
@@ -22,30 +22,30 @@ const ResponsabilidadCivilSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Áreas de Especialización
             </h3>
-            <ul className="space-y-3 text-gray-600">
+            <ul className="space-y-4 text-gray-600">
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Accidentes de tránsito</span>
+                <span className="text-base sm:text-lg">Accidentes de tránsito</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Mala praxis médica</span>
+                <span className="text-base sm:text-lg">Mala praxis médica</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Responsabilidad por productos defectuosos</span>
+                <span className="text-base sm:text-lg">Responsabilidad por productos defectuosos</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Daños en la construcción</span>
+                <span className="text-base sm:text-lg">Daños en la construcción</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Responsabilidad contractual</span>
+                <span className="text-base sm:text-lg">Responsabilidad contractual</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Daño moral y psicológico</span>
+                <span className="text-base sm:text-lg">Daño moral y psicológico</span>
               </li>
             </ul>
           </div>
@@ -54,13 +54,13 @@ const ResponsabilidadCivilSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Nuestro Enfoque
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-base sm:text-lg">
               Evaluamos cada caso de manera integral, analizando todos los aspectos técnicos y legales para determinar la viabilidad del reclamo y la estrategia más efectiva para obtener la reparación correspondiente.
             </p>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-base sm:text-lg">
               Trabajamos con peritos especializados y profesionales de diferentes disciplinas para construir casos sólidos que maximicen las posibilidades de éxito.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-base sm:text-lg">
               Nuestro objetivo es lograr una reparación integral que cubra tanto los daños materiales como el daño moral sufrido por nuestros clientes.
             </p>
           </div>

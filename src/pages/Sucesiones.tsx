@@ -13,7 +13,7 @@ const SucesionesSection = () => {
           Sucesiones
         </h2>
         
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 text-base sm:text-lg">
           Te acompañamos en todos los aspectos legales relacionados con sucesiones, brindando asesoramiento integral y gestión de trámites judiciales para garantizar una transición ordenada del patrimonio familiar.
         </p>
 
@@ -22,30 +22,30 @@ const SucesionesSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Servicios Especializados
             </h3>
-            <ul className="space-y-3 text-gray-600">
+            <ul className="space-y-4 text-gray-600">
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Declaratoria de herederos</span>
+                <span className="text-base sm:text-lg">Declaratoria de herederos</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Tramitación de testamentos</span>
+                <span className="text-base sm:text-lg">Tramitación de testamentos</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Partición de bienes hereditarios</span>
+                <span className="text-base sm:text-lg">Partición de bienes hereditarios</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Avalúo de bienes</span>
+                <span className="text-base sm:text-lg">Avalúo de bienes</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Liquidación de sociedades conyugales</span>
+                <span className="text-base sm:text-lg">Liquidación de sociedades conyugales</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Impugnación de testamentos</span>
+                <span className="text-base sm:text-lg">Impugnación de testamentos</span>
               </li>
             </ul>
           </div>
@@ -54,10 +54,10 @@ const SucesionesSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Proceso Simplificado
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-base sm:text-lg">
               Entendemos que los procesos sucesorios pueden ser complejos y emocionalmente difíciles. Por eso, nos encargamos de todos los aspectos legales y administrativos, simplificando el proceso para que puedas enfocarte en lo que realmente importa.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-base sm:text-lg">
               Nuestro equipo maneja cada caso con sensibilidad y profesionalismo, asegurando que todos los trámites se realicen de manera eficiente y dentro de los plazos establecidos.
             </p>
           </div>

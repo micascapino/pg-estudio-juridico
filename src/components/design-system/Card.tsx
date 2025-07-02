@@ -61,10 +61,10 @@ export const ServiceCard = ({
           <div className={`bg-primary/10 ${iconBg} p-3 sm:p-4 w-fit mx-auto mb-3 sm:mb-4`}>
             {icon}
           </div>
-          <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-2 sm:mb-3">
+          <h3 className="font-inter font-semibold text-base sm:text-lg text-dark-gray mb-2 sm:mb-3">
             {title}
           </h3>
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed flex-grow">
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">
             {description}
           </p>
         </div>
@@ -84,10 +84,10 @@ export const ServiceCard = ({
           {icon}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-1 sm:mb-2">
+          <h3 className="font-inter font-semibold text-base sm:text-lg text-dark-gray mb-1 sm:mb-2">
             {title}
           </h3>
-          <p className="text-xs sm:text-sm text-gray-600 mb-3">
+          <p className="text-sm sm:text-base text-gray-600 mb-3">
             {description}
           </p>
           {button && (
@@ -119,10 +119,10 @@ export const IconCard = ({
       <div className="bg-primary/10 rounded-full p-3 sm:p-4 w-fit mx-auto mb-3 sm:mb-4">
         {icon}
       </div>
-      <h3 className="font-inter font-semibold text-sm sm:text-lg text-dark-gray mb-2 sm:mb-3">
+      <h3 className="font-inter font-semibold text-base sm:text-lg text-dark-gray mb-2 sm:mb-3">
         {title}
       </h3>
-      <p className="text-xs sm:text-sm text-gray-600">
+      <p className="text-sm sm:text-base text-gray-600">
         {description}
       </p>
     </div>

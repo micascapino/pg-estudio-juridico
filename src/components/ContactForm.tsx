@@ -50,10 +50,10 @@ const ContactForm = () => {
             <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
           </div>
         </div>
-        <Title className="text-base sm:text-lg xl:text-xl mb-2 whitespace-nowrap">
+        <Title className="text-lg sm:text-xl xl:text-2xl mb-2 whitespace-nowrap">
           Consulte hoy un Abogado
         </Title>
-        <Body className="text-xs sm:text-base mt-2">
+        <Body className="mt-2">
           Complete el formulario y conversaremos por Whatsapp.
         </Body>
       </div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
           placeholder="Tu Nombre"
           value={formData.name}
           onChange={handleChange}
-          className="w-full bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary text-sm sm:text-base"
+          className="w-full bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary text-base sm:text-lg"
           required
         />
         
@@ -74,14 +74,14 @@ const ContactForm = () => {
           placeholder="Comente brevemente su caso..."
           value={formData.message}
           onChange={handleChange}
-          className="w-full bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary min-h-[80px] sm:min-h-[100px] resize-none text-sm sm:text-base"
+          className="w-full bg-gray-50 border-gray-200 focus:border-primary focus:ring-primary min-h-[80px] sm:min-h-[100px] resize-none text-base sm:text-lg"
           required
         />
         
         <Button 
           type="submit" 
           disabled={isSubmitting}
-          className="w-full bg-primary hover:bg-primary/90 text-white font-poppins font-semibold py-2.5 sm:py-3 text-xs sm:text-base"
+          className="w-full bg-primary hover:bg-primary/90 text-white font-poppins font-semibold py-3 sm:py-4 text-sm sm:text-base"
         >
           {isSubmitting ? 'ENVIANDO...' : 'ENVIAR CONSULTA'}
         </Button>

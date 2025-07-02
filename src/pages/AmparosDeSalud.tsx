@@ -13,7 +13,7 @@ const AmparosDeSaludSection = () => {
           Amparos de Salud
         </h2>
         
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 text-base sm:text-lg">
           Nos especializamos en la protección de tus derechos en salud, garantizando el acceso a tratamientos médicos, medicamentos y prestaciones que las obras sociales y prepagas deben cubrir.
         </p>
 
@@ -22,30 +22,30 @@ const AmparosDeSaludSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Servicios Especializados
             </h3>
-            <ul className="space-y-3 text-gray-600">
+            <ul className="space-y-4 text-gray-600">
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Cobertura de tratamientos médicos especializados</span>
+                <span className="text-base sm:text-lg">Cobertura de tratamientos médicos especializados</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Autorización de medicamentos de alto costo</span>
+                <span className="text-base sm:text-lg">Autorización de medicamentos de alto costo</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Cirugías y procedimientos complejos</span>
+                <span className="text-base sm:text-lg">Cirugías y procedimientos complejos</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Internaciones prolongadas</span>
+                <span className="text-base sm:text-lg">Internaciones prolongadas</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Tratamientos de fertilización asistida</span>
+                <span className="text-base sm:text-lg">Tratamientos de fertilización asistida</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Prestaciones para personas con discapacidad</span>
+                <span className="text-base sm:text-lg">Prestaciones para personas con discapacidad</span>
               </li>
             </ul>
           </div>
@@ -54,10 +54,10 @@ const AmparosDeSaludSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Nuestro Compromiso
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-base sm:text-lg">
               Entendemos que el acceso a la salud es un derecho fundamental. Por eso, trabajamos incansablemente para garantizar que recibas la atención médica que necesitas, sin demoras ni obstáculos burocráticos.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-base sm:text-lg">
               Contamos con amplia experiencia en el manejo de amparos de salud, logrando resoluciones rápidas y efectivas para nuestros clientes.
             </p>
           </div>

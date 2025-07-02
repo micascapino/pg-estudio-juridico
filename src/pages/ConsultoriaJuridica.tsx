@@ -13,7 +13,7 @@ const ConsultoriaJuridicaSection = () => {
           Consultoría Jurídica
         </h2>
         
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 text-base sm:text-lg">
           Brindamos asesoramiento legal integral permanente para empresas y particulares, ayudándote a tomar decisiones informadas y prevenir conflictos legales antes de que surjan.
         </p>
 
@@ -22,26 +22,26 @@ const ConsultoriaJuridicaSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Servicios para Empresas
             </h3>
-            <ul className="space-y-3 text-gray-600">
+            <ul className="space-y-4 text-gray-600">
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Asesoramiento en constitución de sociedades</span>
+                <span className="text-base sm:text-lg">Asesoramiento en constitución de sociedades</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Redacción y revisión de contratos</span>
+                <span className="text-base sm:text-lg">Redacción y revisión de contratos</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Cumplimiento normativo y regulatorio</span>
+                <span className="text-base sm:text-lg">Cumplimiento normativo y regulatorio</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Asesoramiento en fusiones y adquisiciones</span>
+                <span className="text-base sm:text-lg">Asesoramiento en fusiones y adquisiciones</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Resolución alternativa de conflictos</span>
+                <span className="text-base sm:text-lg">Resolución alternativa de conflictos</span>
               </li>
             </ul>
           </div>
@@ -50,26 +50,26 @@ const ConsultoriaJuridicaSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Servicios para Particulares
             </h3>
-            <ul className="space-y-3 text-gray-600">
+            <ul className="space-y-4 text-gray-600">
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Planificación patrimonial</span>
+                <span className="text-base sm:text-lg">Planificación patrimonial</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Asesoramiento en inversiones inmobiliarias</span>
+                <span className="text-base sm:text-lg">Asesoramiento en inversiones inmobiliarias</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Contratos de compraventa y locación</span>
+                <span className="text-base sm:text-lg">Contratos de compraventa y locación</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Asesoramiento en temas tributarios</span>
+                <span className="text-base sm:text-lg">Asesoramiento en temas tributarios</span>
               </li>
               <li className="flex items-start">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span>Protección de datos personales</span>
+                <span className="text-base sm:text-lg">Protección de datos personales</span>
               </li>
             </ul>
           </div>
@@ -78,13 +78,13 @@ const ConsultoriaJuridicaSection = () => {
             <h3 className="text-xl font-semibold text-dark-gray mb-4">
               Nuestro Valor Agregado
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-base sm:text-lg">
               Ofrecemos un servicio de consultoría que va más allá del asesoramiento puntual. Nos convertimos en tu socio estratégico, acompañándote en el crecimiento y desarrollo de tus proyectos.
             </p>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 text-base sm:text-lg">
               Contamos con profesionales especializados en diferentes áreas del derecho, lo que nos permite brindar soluciones integrales adaptadas a las necesidades específicas de cada cliente.
             </p>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-base sm:text-lg">
               Nuestro enfoque preventivo te ayuda a evitar costosos litigios y a tomar decisiones más informadas en todos los aspectos legales de tu actividad.
             </p>
           </div>
