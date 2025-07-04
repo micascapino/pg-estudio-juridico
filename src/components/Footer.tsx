@@ -41,7 +41,7 @@ const Footer = () => {
               <div className="flex items-start space-x-2 sm:space-x-3">
                 <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="font-inter text-gray-300 text-xs sm:text-sm">
-                  Mar del Plata, Buenos Aires, Argentina
+                  Bolívar 3053 Piso 7 Oficina C, Mar del Plata, Buenos Aires, Argentina
                 </span>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
