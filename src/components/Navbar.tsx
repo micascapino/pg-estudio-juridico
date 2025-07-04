@@ -11,6 +11,7 @@ const PRACTICE_AREAS = [
   { path: '/responsabilidad-civil', label: 'Responsabilidad Civil' },
   { path: '/consultoria-juridica', label: 'Consultoría Jurídica' },
   { path: '/contratos', label: 'Contratos' },
+  { path: '/derecho-laboral', label: 'Derecho Laboral' },
   { path: '/propiedad-inmuebles', label: 'Propiedad y Bienes Inmuebles' }
 ];
 
@@ -152,7 +153,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ml-8">
             <WhatsAppButton 
               className="text-sm px-4 lg:px-6 py-2"
             >

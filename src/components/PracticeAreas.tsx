@@ -1,4 +1,4 @@
-import { Scale, Users, FileText, MessageSquare, Phone, Clock, ArrowRight, Heart, Building, FileSignature, Home } from 'lucide-react';
+import { Scale, Users, FileText, MessageSquare, Phone, Clock, ArrowRight, Heart, Building, FileSignature, Home, Briefcase } from 'lucide-react';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -25,6 +25,12 @@ const practiceAreas = [
     title: 'Derecho de Familia',
     description: 'Divorcios, alimentos, cuidado personal, régimen de comunicación.',
     route: '/derecho-familia'
+  },
+  {
+    icon: Briefcase,
+    title: 'Derecho Laboral',
+    description: 'Despidos, indemnizaciones, accidentes de trabajo, acoso laboral, contratos laborales y asesoría empresarial.',
+    route: '/derecho-laboral'
   },
   {
     icon: FileText,

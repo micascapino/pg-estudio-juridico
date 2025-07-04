@@ -73,12 +73,20 @@ const SEO = ({
                 "description": "Asesoramiento y representación en amparos de salud"
               }
             },
-            {
-              "@type": "Offer", 
+                        {
+              "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
                 "name": "Derecho de Familia",
                 "description": "Divorcios, regímenes de visitas, cuota alimentaria"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Derecho Laboral",
+                "description": "Despidos, indemnizaciones, accidentes de trabajo, acoso laboral"
               }
             },
             {
